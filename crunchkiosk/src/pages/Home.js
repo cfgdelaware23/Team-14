@@ -8,6 +8,7 @@ const Home = () => {
   const [sugarFree, setSugarFree] = useState("");
   const [dairyFree, setDairyFree] = useState("");
   const [budget, setBudget] = useState("");
+  const [member, setMember] = useState("tier1");
 
   return (
     <>
@@ -15,7 +16,7 @@ const Home = () => {
         <div className="pricingTitle">Pricing Tier:</div>
 
         <div className="pricingSelect">
-          <select>
+          <select onChange={(e) => setMember(e.value)}>
             <option value="tier1">Member</option>
             <option value="tier2">Non-Member</option>
           </select>
