@@ -1,13 +1,13 @@
 import React from 'react';
 import '../css/Home.css';
-import Navbar from '../components/Navbar';
+
 
 
 const Home = () => {
   return (
     <>
-    <Navbar/>
-    {/* <div className="pricing_budget">
+
+    <div className="pricing_budget">
         <div className="pricingTitle">
             Pricing Tier:
         </div>
@@ -24,7 +24,7 @@ const Home = () => {
         </div>
 
         <input className='budgetVal'/>
-    </div> */}
+    </div>
 
     </>
   );
