@@ -1,11 +1,17 @@
 import "./App.css";
 import Home from "./pages/Home";
+import {Router, Route, Link} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <p>Crunch Kiosk</p>
-      <Home />
+        <p>
+          Crunch Kiosk
+        </p>
+        <div>
+          <Link to="./pages/Shop.js">Shop page</Link>
+        </div>
+        <Home />
     </div>
   );
 }
