@@ -11,8 +11,15 @@
     background-color: rgba(0, 80, 1, 0.027);
     border-bottom: .5px solid black;
     backdrop-filter: blur(1000px);
-    margin-top: 10px;
 
+
+}
+
+.shopLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .pricingSelect{
@@ -31,7 +38,80 @@
 .pricingTitle{
     color: rgb(54, 54, 241);
     font-size: 35px;
-    /* border: 0.5px solid black; */
     border-radius: 15px;
     font-size: 35px;
 }
+
+/* Home.css */
+
+
+/* .pricing_budget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+
+  .pricingTitle {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .pricingSelect select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+
+  .budgetTitle {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .budgetVal {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+
+  .shopLink {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .shopLink a {
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .shopLink a:hover {
+    background-color: #0056b3;
+  }
+  
+
+  header {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+
+  input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+  }
+  
+
+  label {
+    font-size: 1em;
+    margin-right: 10px;
+  }
+   */
