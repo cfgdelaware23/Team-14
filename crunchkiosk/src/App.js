@@ -8,7 +8,7 @@ function App() {
           Crunch Kiosk
         </p>
         <div>
-          <Link to="/autoCartPage">Cart Page</Link>
+          <Link to="./pages/Shop.js">Shop page</Link>
         </div>
     </div>
   );
