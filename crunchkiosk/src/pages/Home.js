@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/Home.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [vegan, setVegan] = useState("");
@@ -33,6 +34,13 @@ const Home = () => {
           value={budget}
         />
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div className="shopLink">
+          <Link to="./pages/Shop.js">Shop page</Link>
+      
+
       <div>
         {/* sugar freee vegan gluten free */}
         {/* change value to be what db name col is */}
@@ -68,6 +76,7 @@ const Home = () => {
             checked={sugarFree === "sugarFree"}
             onChange={() => setSugarFree("sugarFree")}
           />
+        </div>
         </div>
       </div>
     </>
