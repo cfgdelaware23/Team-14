@@ -3,6 +3,9 @@ import sample from "../sample1.json";
 import "../css/Selection.css";
 import Item from '../components/Item';
 import Footer from '../components/Footer';
+import { useEffect } from 'react';
+import Aos from 'aos';
+
 
 function Selection() {
     //const [category, setCategory] = useState("");
@@ -25,6 +28,34 @@ function Selection() {
     };
 
     fetchData();
+
+    // variable that keeps track of the user's window size width and height
+    const [width, setWidth]   = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    // listener that constantly updates the window size variables when user changes it
+    const updateDimensions = () => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+    }
+
+    // useEffect function runs once directly when page loads
+    useEffect(() => {
+        //  Initializing AnimateOnScroll, tweak this function to change animation duration and delay
+        Aos.init({
+            once: 'true',
+            duration: 1000,
+            delay: 200
+        });
+
+        //  Scroll to top of page when page loads
+        window.scrollTo(0, 0);
+
+        //  Adding event listener to window to update window size variables
+        window.addEventListener("resize", updateDimensions);
+
+        //  Removing event listener when component unmounts
+        return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
 
     return (
         <>
