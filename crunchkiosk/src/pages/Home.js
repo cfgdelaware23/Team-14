@@ -44,18 +44,6 @@ const Home = () => {
         <br />
         <h1>Welcome to Crunch Kiosk!</h1>
         <p>Please fill out the following form to see available groceries:</p>
-        <div class="card w-75">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              With supporting text below as a natural lead-in to additional
-              content.
-            </p>
-            <a href="#" class="btn btn-primary">
-              Button
-            </a>
-          </div>
-        </div>
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
           <div className="pricingSelect">
