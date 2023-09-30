@@ -15,7 +15,28 @@ public class RESTController {
     @Autowired
     ItemRepository itemRepository;
 
-    @RequestMapping(value="/get", method=RequestMethod.GET)
+    @RequestMapping(value="/inventory", method=RequestMethod.GET)
+    public ResponseEntity getInventory() {
+        return new ResponseEntity(itemRepository.findAll(), HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/updateFull", method=RequestMethod.PATCH)
+    public ResponseEntity updateFullPrice(Integer id, Integer price) {
+        ItemEntity item = itemRepository.findById(id).get();
+        item.setFull_price(price);
+        itemRepository.save(item);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/updateDiscount", method=RequestMethod.PATCH)
+    public ResponseEntity updateDiscountedPrice(Integer id, Integer price) {
+        ItemEntity item = itemRepository.findById(id).get();
+        item.setDiscounted_price(price);
+        itemRepository.save(item);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/selection", method=RequestMethod.GET)
     public ResponseEntity getItems(RequestItems requestItems) {
         List<ItemEntity> entities = itemRepository.findAll();
         List<ItemResult> results = new ArrayList<>();
