@@ -1,8 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Inter);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 body {
   background: url("../assets/bg.png");
   background-size: cover;
   height: 100%;
   width: 100%;
+  font-family: Inter;
 }
 .shop-container {
   display: flex;
@@ -16,6 +20,7 @@ body {
 .shopList {
   font-size: 24px;
   margin-bottom: 20px;
+  font-family: Roboto;
 }
 
 /* Individual shop items */
@@ -28,6 +33,7 @@ body {
   width: 800px;
   text-align: center;
   font-weight: 700;
+  font-family: Roboto;
 }
 
 /* Link styling */
@@ -35,6 +41,7 @@ body {
   text-decoration: none;
   color: #333;
   font-size: 18px;
+  font-family: Inter;
 }
 
 /* Link hover effect */
