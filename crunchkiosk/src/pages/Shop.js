@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Context from "./Context";
 import { useContext } from "react";
+const {Data} = require('./Home.js');
 
 // {
 //     vegan = "False",
@@ -13,14 +14,23 @@ import { useContext } from "react";
 //     member = "False",
 //   }
 
-function Shop() {
+const Shop = () => {
   const [stuff, setStuff] = useState();
   const userData = useContext(Context);
 
   //this is the code to api will be called when we click link to Selection
 
+  console.log(Data);
+  // let a = ['member', 'budget', 'gluten_free', 'dairy_free', 'vegan', 'vegetarian', 'sugar_free', 'category']
+  // for(let i = 0; i<a.length; i++){
+  //   console.log(props)
+  // }
+
+
+
   return (
     <>
+
       <div className="shopList">
         <p>Shop</p>
       </div>
