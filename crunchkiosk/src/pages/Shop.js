@@ -1,29 +1,42 @@
 import "../css/Shop.css";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-function Shop() {
-    return ( 
-        <>
-        <div className = "shopList">
-            <p>Shop</p>
-        </div>
+function Shop({
+  vegan = "False",
+  glutenFree = "False",
+  sugarFree = "False",
+  dairyFree = "False",
+  budget = "False",
+  member = "False",
+}) {
+  const [stuff, setStuff] = useState();
 
-        <div className = "shopItem">
-            <Link>Fruits</Link>
-        </div>
-        <div className = "shopItem">
-            <Link>Veggies</Link>
-        </div>
-        <div className = "shopItem">
-            <Link>Carbs</Link>
-        </div>
-        <div className = "shopItem">
-            <Link>Proteins</Link>
-        </div>
-        <div className = "shopItem">
-            <Link>Dairy/Al</Link>
-        </div>
-        </>
-    )
+  //this is the code to api will be called when we click link to Selection
+
+  return (
+    <>
+      <div className="shopList">
+        <p>Shop</p>
+      </div>
+
+      <div className="shopItem">
+        <Link>Fruits</Link>
+      </div>
+      <div className="shopItem">
+        <Link>Veggies</Link>
+      </div>
+      <div className="shopItem">
+        <Link>Carbs</Link>
+      </div>
+      <div className="shopItem">
+        <Link>Proteins</Link>
+      </div>
+      <div className="shopItem">
+        <Link>Dairy/Al</Link>
+      </div>
+    </>
+  );
 }
 
 export default Shop;
