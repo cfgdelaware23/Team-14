@@ -1,7 +1,10 @@
-body{background: rgb(119, 149, 161)}
+body{background: url("../assets/bg.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;}
 
-.cartTitle{
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold;
-}
+  .cartTitle{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+  }
