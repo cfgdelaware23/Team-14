@@ -12,7 +12,7 @@ function CartBox() {
     ['sweet potato', 1.50, 2],
     ['chicken breast', 2.50, 3]
   ];
-
+  
   const [total, setTotal] = useState(0);
   const [myCart, setMyCart] = useState(initialCart);
 
@@ -41,7 +41,10 @@ function CartBox() {
         <Item item={item} index={index} total={total} setTotal={setTotal} onQuantityChange={handleQuantityChange}/>
       ))}
       <div className="total">Total: ${total}</div>
-      <button className="checkout-button">Print Shoplist</button>
+      <div>
+        <button className="checkout-button">Print Shoplist</button>
+      </div>
+      
     </div>
   );
 }
