@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import '../css/Footer.css'
-
-import { FaInstagram, FaTwitter, FaTiktok } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
     const [total,setTotal] = useState(0);
-    
+
   return (
     <div className='footer-container'>
         <div className='foot-branding'>
