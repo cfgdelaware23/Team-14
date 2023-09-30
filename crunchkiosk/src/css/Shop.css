@@ -3,6 +3,7 @@ body {background-color: white;}
 .shopList{
     font-size: 40px;
     text-align: center;
+    padding-bottom: 5%;
 }
 
 .shopItem{
@@ -14,6 +15,7 @@ body {background-color: white;}
     text-align: center;
     border: black;
     border-style: solid;
+    padding-bottom: 10px;
 
 }
 

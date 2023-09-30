@@ -23,15 +23,19 @@ function Shop({
       <div className="shopItem">
         <Link>Fruits</Link>
       </div>
+      <br></br>
       <div className="shopItem">
         <Link>Veggies</Link>
       </div>
+      <br></br>
       <div className="shopItem">
         <Link>Carbs</Link>
       </div>
+      <br></br>
       <div className="shopItem">
         <Link>Proteins</Link>
       </div>
+      <br></br>
       <div className="shopItem">
         <Link>Dairy/Al</Link>
       </div>
