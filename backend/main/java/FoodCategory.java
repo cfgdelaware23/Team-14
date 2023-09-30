@@ -1,16 +1,20 @@
 package main.java;
 
-public enum FoodCategory {
-    FRUIT(1),
-    VEGETABLE(2),
-    CARBOHYDRATE(3),
-    PROTEIN(4),
-    DAIRY(5),
-    BEVERAGE(6),
-    SNACK(7);
-    int value;
+import lombok.Getter;
+import lombok.Setter;
 
-    FoodCategory(int value) {
+@Getter
+public enum FoodCategory {
+    FRUIT("FRUIT"),
+    VEGETABLE("VEGETABLE"),
+    CARBOHYDRATE("CARBOHYDRATE"),
+    PROTEIN("PROTEIN"),
+    DAIRY("DAIRY"),
+    BEVERAGE("BEVERAGE"),
+    SNACK("SNACK");
+    String value;
+
+    FoodCategory(String value) {
         this.value = value;
     }
 }

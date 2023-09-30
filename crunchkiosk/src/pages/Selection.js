@@ -15,17 +15,18 @@ function Selection() {
     const location = useLocation();
 
     const [items, setItems] = useState([]);
-    const [category, setCategory] = useState(location.state[7]);
     const [cart, setCart] = useState([]);
 
-    
-
     const [userData,setUserData] = useState(location.state);
+    const category = userData[7];
 
-    console.log(userData);
+    let config = {
+    headers:
+        {'Content-Type': 'application/json'}
+    };
 
     const fetchData = async () => {
-    const dataToSend = {
+    const dataToSend = JSON.stringify({
         membership: userData[0],
         category: userData[7],
         budget: userData[1],
@@ -34,20 +35,20 @@ function Selection() {
         vegan: userData[4],
         vegetarian: userData[5],
         sugarFree: userData[6],
-    };
-
+    });
         try{
-            const response = await axios.post('http://localhost:8080/selection',dataToSend);
+            const response = await axios.post('http://localhost:8080/selection',dataToSend, config);
             setItems(response.data);
-            // console.log(response.data);
+
         }catch(error){
             console.log(error);
             console.error("error sending data", error);
         }
         
     };
-
-    fetchData();
+    useEffect(() => {
+        fetchData();
+    }, [] );
 
     const addToCart = () => {
         console.log("add to cart");
@@ -90,7 +91,6 @@ function Selection() {
         <>
         <div className='select-body'>
             <h1>{category}</h1>
-            {/*{console.log("!!!!")}*/}
             <div className='main'>
                 {/* {console.log(items[0])} */}
                 {items.map((item) => (

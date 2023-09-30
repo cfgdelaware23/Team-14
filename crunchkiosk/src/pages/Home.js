@@ -15,8 +15,8 @@ const Home = () => {
   const [glutenFree, setGlutenFree] = useState(false);
   const [sugarFree, setSugarFree] = useState(false);
   const [dairyFree, setDairyFree] = useState(false);
-  const [budget, setBudget] = useState("");
-  const [member, setMember] = useState("false");
+  const [budget, setBudget] = useState(0);
+  const [member, setMember] = useState(false);
   const ANIMALS = ["true", "false"];
 
   const navigate = useNavigate();
@@ -32,7 +32,13 @@ const Home = () => {
   // };
 
   const goToShop = (test) => {
-    const info = [member, budget, glutenFree, dairyFree, vegan, vegetarian, sugarFree];
+    let tempMemb = false;
+    if(member === "true"){
+      tempMemb = true;
+    }else{
+      tempMemb = false;
+    }
+    const info = [tempMemb, budget, glutenFree, dairyFree, vegan, vegetarian, sugarFree];
     navigate("/shop", {state: info});
   };
 
@@ -50,17 +56,18 @@ const Home = () => {
     >
       <>
         <br />
-        <h1>Welcome to Crunch Kiosk!</h1>
+        <div className="pricingTitle">Welcome to Crunch Kiosk!</div>
         <p>Please fill out the following form to see available groceries:</p>
         <div className="pricing_budget">
-          <div className="pricingTitle">Pricing Tier:</div>
+          <div className="smallerTitle">Membership Status:</div>
           <div className="pricingSelect">
             {/* <select onSelect={(e) => handleMember(e.value)}>
               <option value="tier1">Member</option>
               <option value="tier2">Non-Member</option>
             </select> */}
             <label htmlFor="animal">
-              Member
+              Do you have a membership with The Better Store?
+                <br/>
               <select
                 id="animal"
                 value={member}
@@ -82,7 +89,9 @@ const Home = () => {
               </select>
             </label>
           </div>
-          <div className="budgetTitle">Budget:</div>
+            <br/>
+          <div className="smallerTitle">Budget:</div>
+            <p>Please specify the budget you are shopping with today (if applicable)</p>
           <input
             className="budgetVal"
             placeholder="$ Budget"
@@ -102,8 +111,8 @@ const Home = () => {
             {/* change value to be what db name col is */}
 
             <header> Dietary Restrictions</header>
+              <p>Please check the boxes which match your dietary restrictions:</p>
             <div className="">
-              <br></br>
               <label for="vegan">Vegan</label>
               <input
                 type="checkbox"
@@ -143,9 +152,8 @@ const Home = () => {
                   else setGlutenFree(true);
                 }}
               />
-
-              <br></br>
-              <label for="sugarFree">Sugar Free</label>
+                <br></br>
+                <label for="sugarFree">Sugar Free</label>
               <input
                 type="checkbox"
                 checked={sugarFree === true}
@@ -160,6 +168,7 @@ const Home = () => {
             SHOP
           </div>
         </div>
+          <br/>
       </>
     </Context.Provider>
   );
