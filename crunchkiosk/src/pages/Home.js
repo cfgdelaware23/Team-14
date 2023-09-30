@@ -80,7 +80,7 @@ const Home = () => {
         <div className="bottom">
           <Link to="/shop">Shop page</Link>
         </div>
-        <Footer/>
+        
       </div>
     </>
   );
