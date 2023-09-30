@@ -3,5 +3,17 @@
     border-bottom: 2px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.itemName {
+    text-align: left;
+}
+
+.itemPrice {
+    margin: auto;
+}
+
+.itemQuantity {
+    text-align: right;
 }
