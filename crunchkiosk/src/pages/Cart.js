@@ -1,10 +1,12 @@
 import CartBox from "../components/CartBox";
 import "../css/Cart.css";
 function Cart() {
+    const imageIcon = <i class="fa-solid fa-cart-shopping"></i>
+
     return ( 
         <>
         <div className = "cartTitle">
-            <p>Cart</p><i class="fa-solid fa-cart-shopping"></i>
+            <h1>Cart {imageIcon}</h1> 
         </div>
             <CartBox />
         </>

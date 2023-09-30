@@ -58,7 +58,7 @@ function Shop() {
     <>
     <div className="shop-container">
       <div className="shopList">
-        <p>Shop</p>
+        <h1>Shop</h1>
       </div>
 
       <div className="shopItem" onClick={() => goToSelection("FRUIT")}>

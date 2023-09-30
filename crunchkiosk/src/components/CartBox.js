@@ -15,7 +15,7 @@ function CartBox() {
 
   const [total, setTotal] = useState(0);
   const [myCart, setMyCart] = useState(initialCart);
-
+  
   //TEMPORARY TOTAL
   const calculateTotal = () => {
     let total = 0;
@@ -41,7 +41,10 @@ function CartBox() {
         <Item item={item} index={index} total={total} setTotal={setTotal} onQuantityChange={handleQuantityChange}/>
       ))}
       <div className="total">Total: ${total}</div>
-      <button className="checkout-button">Print Shoplist</button>
+      <div>
+        <button className="checkout-button">Print Shoplist</button>
+      </div>
+      
     </div>
   );
 }
