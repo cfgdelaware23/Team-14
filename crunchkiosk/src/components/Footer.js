@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Footer.css";
 
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({theTotal=0}) => {
+
   const [total, setTotal] = useState(0);
+  useEffect(() => {
+    setTotal(theTotal);
+  }
+  , [theTotal]);
 
   return (
     <div className="footer-container">

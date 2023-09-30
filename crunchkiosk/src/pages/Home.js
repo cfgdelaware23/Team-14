@@ -1,11 +1,9 @@
 import React from "react";
 import "../css/Home.css";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Footer from "../components/Footer";
-import Shop from "./Shop";
 import Context from "./Context";
 import { useNavigate } from "react-router-dom";
 
@@ -16,7 +14,11 @@ const Home = () => {
   const [sugarFree, setSugarFree] = useState(false);
   const [dairyFree, setDairyFree] = useState(false);
   const [budget, setBudget] = useState(0);
+<<<<<<< HEAD
   const [member, setMember] = useState(false);
+=======
+  const [member, setMember] = useState("false");
+>>>>>>> 7e191254051179910841e5fd62a691e51a56b087
   const ANIMALS = ["true", "false"];
 
   const navigate = useNavigate();
@@ -56,8 +58,13 @@ const Home = () => {
     >
       <>
         <br />
+<<<<<<< HEAD
         <div className="pricingTitle">Welcome to Crunch Kiosk!</div>
         <p>Please fill out the following form to see available groceries:</p>
+=======
+        <div className = 'crunchKiosk'>Welcome to Crunch Kiosk!</div>
+        <div className = 'instructions'>Please fill out the following form to see available groceries:</div>
+>>>>>>> 7e191254051179910841e5fd62a691e51a56b087
         <div className="pricing_budget">
           <div className="smallerTitle">Membership Status:</div>
           <div className="pricingSelect">
@@ -106,7 +113,7 @@ const Home = () => {
         <br></br>
         <br></br>
         <div>
-          <div className="shopLink box">
+          <div className="shopLink box2">
             {/* sugar freee vegan gluten free */}
             {/* change value to be what db name col is */}
 

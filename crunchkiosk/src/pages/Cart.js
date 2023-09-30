@@ -1,14 +1,14 @@
 import CartBox from "../components/CartBox";
-import Footer from "../components/Footer";
 import "../css/Cart.css";
 function Cart() {
+    const imageIcon = <i class="fa-solid fa-cart-shopping"></i>
+
     return ( 
         <>
         <div className = "cartTitle">
-            <p>Cart</p>
+            <h1>Cart {imageIcon}</h1> 
         </div>
             <CartBox />
-            <Footer />
         </>
     )
 }

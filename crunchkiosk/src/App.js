@@ -5,10 +5,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <div className="App">
-        {/* <p>
-          Crunch Kiosk
-        </p> */}
-        
+        <link rel="icon" href="./assets/logo.ico" />
         <Home />
     </div>
   );

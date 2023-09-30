@@ -3,7 +3,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-import Context from "./Context";
 import {useLocation} from 'react-router-dom';
 
 // {
@@ -38,7 +37,7 @@ function Shop() {
   }, [location.state]);
 
 
-  /* homeData:
+  /* homeData - by index:
   0: vegan
   1: vegetarian
   2: glutenFree
@@ -46,9 +45,10 @@ function Shop() {
   4: dairyFree
   5: budget
   6: member
+  *7: category
   */
   const goToSelection = (category) => {
-
+    console.log([...homeData,category])
     navigate("/selection", {state: [...homeData,category]});
 
   };
@@ -58,7 +58,7 @@ function Shop() {
     <>
     <div className="shop-container">
       <div className="shopList">
-        <p>Shop</p>
+        <h1>Shop</h1>
       </div>
 
       <div className="shopItem" onClick={() => goToSelection("FRUIT")}>
@@ -90,7 +90,7 @@ function Shop() {
       </div>
 
       <div className="shopItem" onClick={() => goToSelection("DAIRY")}>
-        <Link to="/selection">Dairy/Al</Link>
+        <Link to="/selection">Dairy</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious dairy products, all based off of your dietary restrictions</p>

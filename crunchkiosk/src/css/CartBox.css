@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffff;
+    background-image: url("../assets/receipt.avif");
+    /* background-color: #f7efdd; */
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -23,22 +24,27 @@
 .item-name {
     font-size: 16px;
     font-weight: bold;
+    font-family: Inter
 }
 
 .item-price {
     font-size: 14px;
     color: #555;
+    font-family: Inter
 }
 
 .item-quantity {
     font-size: 14px;
     color: #555;
+    font-family: Inter
 }
 
 .total {
+    background-color: #B8D8BE;
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
+    font-family: Inter
 }
 
 .checkout-button {
@@ -50,6 +56,7 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    font-family: Inter;
 }
 
 .checkout-button:hover {
