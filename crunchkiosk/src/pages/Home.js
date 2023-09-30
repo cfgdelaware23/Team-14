@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Home.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import Footer from "../components/Footer";
 import Shop from "./Shop";
@@ -28,21 +29,41 @@ const Home = () => {
   // }
 
   return (
-
     <Context.Provider
-      value={[vegan, vegetarian, glutenFree, sugarFree, dairyFree, budget, member]}
+      value={[
+        vegan,
+        vegetarian,
+        glutenFree,
+        sugarFree,
+        dairyFree,
+        budget,
+        member,
+      ]}
     >
       <>
+        <br />
+        <h1>Welcome to Crunch Kiosk!</h1>
+        <p>Please fill out the following form to see available groceries:</p>
+        <div class="card w-75">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
+            <a href="#" class="btn btn-primary">
+              Button
+            </a>
+          </div>
+        </div>
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
-
           <div className="pricingSelect">
             <select onChange={(e) => setMember(e.value)}>
               <option value="tier1">Member</option>
               <option value="tier2">Non-Member</option>
             </select>
           </div>
-
           <div className="budgetTitle">Budget:</div>
           <input
             className="budgetVal"
@@ -70,7 +91,7 @@ const Home = () => {
                 type="checkbox"
                 checked={vegan === "vegan"}
                 onChange={() => {
-                  if(vegan === "vegan") setVegan("");
+                  if (vegan === "vegan") setVegan("");
                   else setVegan("vegan");
                 }}
               />
@@ -80,7 +101,7 @@ const Home = () => {
                 type="checkbox"
                 checked={vegetarian === "vegetarian"}
                 onChange={() => {
-                  if(vegetarian === "vegetarian") setVegetarian("");
+                  if (vegetarian === "vegetarian") setVegetarian("");
                   else setVegetarian("vegetarian");
                 }}
               />
@@ -90,7 +111,7 @@ const Home = () => {
                 type="checkbox"
                 checked={dairyFree === "dairyFree"}
                 onChange={() => {
-                  if(dairyFree === "dairyFree") setDairyFree("");
+                  if (dairyFree === "dairyFree") setDairyFree("");
                   else setDairyFree("dairyFree");
                 }}
               />
@@ -100,7 +121,7 @@ const Home = () => {
                 type="checkbox"
                 checked={glutenFree === "glutenFree"}
                 onChange={() => {
-                  if(glutenFree === "glutenFree") setGlutenFree("");
+                  if (glutenFree === "glutenFree") setGlutenFree("");
                   else setGlutenFree("glutenFree");
                 }}
               />
@@ -111,14 +132,14 @@ const Home = () => {
                 type="checkbox"
                 checked={sugarFree === "sugarFree"}
                 onChange={() => {
-                  if(sugarFree === "sugarFree") setSugarFree("");
+                  if (sugarFree === "sugarFree") setSugarFree("");
                   else setSugarFree("sugarFree");
                 }}
               />
             </div>
           </div>
           <div className="bottom">
-            <Link className='linked' to="/shop">
+            <Link className="linked" to="/shop">
               {/* <Shop
               vegan={vegan}
               glutenFree={glutenFree}
@@ -134,7 +155,6 @@ const Home = () => {
         </div>
       </>
     </Context.Provider>
-
   );
 };
 
