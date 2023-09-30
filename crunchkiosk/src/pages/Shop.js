@@ -1,7 +1,11 @@
-function Shop() {
+function Shop( props ) {
+    // const itemsArray = []
+
     return ( 
         <>
+
             <p>Shop</p>
+            {/* <Selection /> */}
         </>
     )
 }
