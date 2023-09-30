@@ -37,7 +37,7 @@ function Shop() {
   }, [location.state]);
 
 
-  /* homeData:
+  /* homeData - by index:
   0: vegan
   1: vegetarian
   2: glutenFree
@@ -45,6 +45,7 @@ function Shop() {
   4: dairyFree
   5: budget
   6: member
+  *7: category
   */
   const goToSelection = (category) => {
 
