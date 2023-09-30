@@ -96,7 +96,7 @@ const Home = () => {
             </div>
           </div>
           <div className="bottom">
-            <Link to="/shop">
+            <Link className='linked' to="/shop">
               {/* <Shop
               vegan={vegan}
               glutenFree={glutenFree}
