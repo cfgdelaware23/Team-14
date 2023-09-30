@@ -75,7 +75,7 @@ public class RESTController {
     }
 
     @RequestMapping(value="/newItem", method=RequestMethod.POST)
-    public ResponseEntity<> postNewItem(ItemEntity itemEntity) {
+    public ResponseEntity postNewItem(ItemEntity itemEntity) {
         itemRepository.save(itemEntity);
         return new ResponseEntity<>(HttpStatus.OK);
     }
