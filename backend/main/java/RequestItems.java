@@ -1,6 +1,4 @@
-package main;
-
-import org.springframework.stereotype.Component;
+package main.java;
 
 public class RequestItems {
     boolean membership;
