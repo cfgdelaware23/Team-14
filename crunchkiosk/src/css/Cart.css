@@ -1,1 +1,7 @@
 body{background: rgb(119, 149, 161)}
+
+.cartTitle{
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
