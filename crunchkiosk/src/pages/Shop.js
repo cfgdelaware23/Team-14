@@ -29,23 +29,30 @@ function Shop() {
   const navigate = useNavigate();
   const location = useLocation();
 
+
   console.log(location.state);
-//   const {test} = route.params;
-//   console.log(test)
-//   const [total, setTotal] = useState(0);
+  const [homeData, setHomeData] = useState([]);
+  useEffect(() => {
+    // Access location.state here once it's properly initialized
+    setHomeData(location.state || []);
+  }, [location.state]);
 
-//   const userData = useContext(Context);
 
-  const goToSelection = () => {
-    // fetch('https://example.com/api/v1/posts', {
-    //     method: 'POST',
-    //     body: JSON.stringify({
-    //         title: 'My new post',
-    //         body: 'This is my new post.'
-    //     })
-    //     });
-    navigate("/selection");
+  /* homeData:
+  0: vegan
+  1: vegetarian
+  2: glutenFree
+  3: sugarFree
+  4: dairyFree
+  5: budget
+  6: member
+  */
+  const goToSelection = (category) => {
+
+    navigate("/selection", {state: [...homeData,category]});
+
   };
+
 
   return (
     <>
@@ -54,39 +61,53 @@ function Shop() {
         <p>Shop</p>
       </div>
 
-      <div className="shopItem" onClick={goToSelection}>
-        <Link to="/fruits">Fruits</Link>
+      <div className="shopItem" onClick={() => goToSelection("FRUIT")}>
+        <Link to="/selection">Fruits</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious fruits!</p>
       </div>
 
-      <div className="shopItem" onClick={goToSelection}>
-        <Link to="/veggies">Veggies</Link>
+      <div className="shopItem" onClick={() => goToSelection("VEGETABLE")}>
+        <Link to="/selection">Veggies</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious vegetables!</p>
       </div>
 
-      <div className="shopItem" onClick={goToSelection}>
-        <Link to="/carbs">Carbs</Link>
+      <div className="shopItem" onClick={ () => goToSelection("CARBOHYDRATE")}>
+        <Link to="/selection">Carbs</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious carbohydrates, all based off of your dietary restrictions</p>
       </div>
 
-      <div className="shopItem" onClick={goToSelection}>
-        <Link to="/proteins">Proteins</Link>
+      <div className="shopItem" onClick={ () => goToSelection("PROTEIN")}>
+        <Link to="/selection">Proteins</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious proteins, all based off of your dietary restrictions</p>
       </div>
 
-      <div className="shopItem" onClick={goToSelection}>
-        <Link to="/dairy">Dairy/Al</Link>
+      <div className="shopItem" onClick={() => goToSelection("DAIRY")}>
+        <Link to="/selection">Dairy/Al</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious dairy products, all based off of your dietary restrictions</p>
+      </div>
+
+      <div className="shopItem" onClick={() => goToSelection("BEVERAGE")}>
+        <Link to="/selection">Beverage</Link>
+        <br></br>
+        <br></br>
+        <p className="subtitle">Choose from a selection of healthy, tasty, and nutritious beverages, taking into account your dietary restrictions.</p>
+      </div>
+
+      <div className="shopItem" onClick={ () => goToSelection("SNACK")}>
+        <Link to="/selection">Snacks</Link>
+        <br></br>
+        <br></br>
+        <p className="subtitle">Choose from a selection of healthy, tasty, and nutritious snacks, taking into account your dietary restrictions.</p>
       </div>
     </div>
     <Footer/>
