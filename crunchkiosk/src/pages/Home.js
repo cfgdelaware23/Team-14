@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Home.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [vegan, setVegan] = useState("");
@@ -79,6 +80,7 @@ const Home = () => {
         <div className="bottom">
           <Link to="/shop">Shop page</Link>
         </div>
+        <Footer/>
       </div>
     </>
   );
