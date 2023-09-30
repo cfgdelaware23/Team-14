@@ -48,8 +48,8 @@ const Home = () => {
     >
       <>
         <br />
-        <h1>Welcome to Crunch Kiosk!</h1>
-        <p>Please fill out the following form to see available groceries:</p>
+        <div className = 'crunchKiosk'>Welcome to Crunch Kiosk!</div>
+        <div className = 'instructions'>Please fill out the following form to see available groceries:</div>
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
           <div className="pricingSelect">
