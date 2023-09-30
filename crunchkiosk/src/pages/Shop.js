@@ -2,7 +2,7 @@ import "../css/Shop.css";
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "../components/Footer";
 import Context from "./Context";
 
 // {
@@ -52,7 +52,7 @@ function Shop() {
 
 
   return (
-    
+    <>
     <div className="shop-container">
       <div className="shopList">
         <p>Shop</p>
@@ -93,6 +93,8 @@ function Shop() {
         <p className="subtitle">Choose from a selection of healthy and nutritious dairy products, all based off of your dietary restrictions</p>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
