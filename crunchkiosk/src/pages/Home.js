@@ -44,6 +44,7 @@ const Home = () => {
         <br />
         <h1>Welcome to Crunch Kiosk!</h1>
         <p>Please fill out the following form to see available groceries:</p>
+        <div className="cardContainer">
         <div class="card w-75">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -55,6 +56,7 @@ const Home = () => {
               Button
             </a>
           </div>
+        </div>
         </div>
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
