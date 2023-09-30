@@ -37,35 +37,35 @@ function Shop() {
         <Link to="/fruits">Fruits</Link>
         <br></br>
         <br></br>
-        <p>Choose from a selection of healthy and nutritious fruits!</p>
+        <p className="subtitle">Choose from a selection of healthy and nutritious fruits!</p>
       </div>
 
       <div className="shopItem">
         <Link to="/veggies">Veggies</Link>
         <br></br>
         <br></br>
-        <p>Choose from a selection of healthy and nutritious vegetables!</p>
+        <p className="subtitle">Choose from a selection of healthy and nutritious vegetables!</p>
       </div>
 
       <div className="shopItem">
         <Link to="/carbs">Carbs</Link>
         <br></br>
         <br></br>
-        <p>Choose from a selection of healthy and nutritious carbohydrates, all based off of your dietary restrictions</p>
+        <p className="subtitle">Choose from a selection of healthy and nutritious carbohydrates, all based off of your dietary restrictions</p>
       </div>
 
       <div className="shopItem">
         <Link to="/proteins">Proteins</Link>
         <br></br>
         <br></br>
-        <p>Choose from a selection of healthy and nutritious proteins, all based off of your dietary restrictions</p>
+        <p className="subtitle">Choose from a selection of healthy and nutritious proteins, all based off of your dietary restrictions</p>
       </div>
 
       <div className="shopItem">
         <Link to="/dairy">Dairy/Al</Link>
         <br></br>
         <br></br>
-        <p>Choose from a selection of healthy and nutritious dairy products, all based off of your dietary restrictions</p>
+        <p className="subtitle">Choose from a selection of healthy and nutritious dairy products, all based off of your dietary restrictions</p>
       </div>
     </div>
   );
