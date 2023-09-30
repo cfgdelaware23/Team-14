@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import sample from "./sample1.json"; 
+import sample from "../sample1.json"; 
 
 function Selection() {
     //const [category, setCategory] = useState("");
@@ -33,9 +33,10 @@ function Selection() {
 
     return (
         <div>
-            <p>{category}</p>
-                {sample && sample.map(({item, price}) => (<div key = {price}>{item} {price}</div>))}
-            <p>goodbye</p>
+            <h1>{category}</h1>
+            <div>
+                {sample.map(({item, price}) => (<li>{item} {price}</li>))}
+            </div>
         </div>
     );
 }
