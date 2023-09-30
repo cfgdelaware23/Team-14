@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import sample from "../sample1.json"; 
 import "../css/Selection.css";
+import Item from '../components/Item';
+import Footer from '../components/Footer';
 
 function Selection() {
     //const [category, setCategory] = useState("");
@@ -23,21 +25,14 @@ function Selection() {
     };
 
     fetchData();
-    console.log(items);
-
-    let list = document.getElementById('items');
-    for(let i = 0; i < items.length; i++){
-        let li = document.createElement('li');
-        li.innerText = [items][i];
-        list.appendChild(li);
-    }
 
     return (
         <div>
             <h1>{category}</h1>
-            <div>
-                {sample.map(({item, price}) => (<li>{item} {price}</li>))}
+            <div className='main'>
+                {sample.map(({item, price}) => (<Item itemName={item} itemPrice={price} />))}
             </div>
+            <Footer />
         </div>
     );
 }

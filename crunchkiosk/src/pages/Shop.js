@@ -14,7 +14,9 @@ import { useContext } from "react";
 //   }
 
 function Shop() {
-  const [stuff, setStuff] = useState();
+  const [total, setTotal] = useState(0);
+  
+
   const userData = useContext(Context);
 
   //this is the code to api will be called when we click link to Selection
@@ -26,7 +28,7 @@ function Shop() {
       </div>
 
       <div className="shopItem">
-        <Link>Fruits</Link>
+        <Link >Fruits</Link>
       </div>
       <br></br>
       <div className="shopItem">
