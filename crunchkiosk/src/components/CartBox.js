@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/CartBox.css';
 import Item from './Item';
+import { useState } from 'react';
 
 function CartBox() {
   const myCart = [
@@ -8,6 +9,7 @@ function CartBox() {
     ['sourdough', 2.35, 1],
   ];
 
+  const [total, setTotal] = useState(0);
 
   //TEMPORARY TOTAL
   const calculateTotal = () => {
@@ -21,7 +23,7 @@ function CartBox() {
   return (
     <div className="box">
       {myCart.map((item, index) => (
-        <Item item={item} index={index} />
+        <Item item={item} index={index} total={total} setTotal={setTotal}/>
       ))}
       <div className="total">Total: ${calculateTotal()}</div>
       <button className="checkout-button">Print Shoplist</button>

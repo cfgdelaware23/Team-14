@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Context from "./Context";
+import {useLocation} from 'react-router-dom';
 
 // {
 //     vegan = "False",
@@ -22,14 +23,27 @@ import Context from "./Context";
           </div>
         ))}
       </div> */}
-function Shop() {
+
+      
+function Shop( {route}) {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const [total, setTotal] = useState(0);
+  console.log(location.state);
+//   const {test} = route.params;
+//   console.log(test)
+//   const [total, setTotal] = useState(0);
 
-  const userData = useContext(Context);
+//   const userData = useContext(Context);
 
   const goToSelection = () => {
+    fetch('https://example.com/api/v1/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+            title: 'My new post',
+            body: 'This is my new post.'
+        })
+        });
     navigate("/selection");
   };
 

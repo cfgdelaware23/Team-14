@@ -74,9 +74,6 @@ function Selection() {
                     </div>
                 ))}
             </div>
-            {/* <div className='main'>
-                {sample.map(({item, price}) => (<Item itemName={item} itemPrice={price} />))}
-            </div> */}
         </div>
             <Footer />
         </>        

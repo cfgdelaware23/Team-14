@@ -10,29 +10,30 @@ import Context from "./Context";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const [vegan, setVegan] = useState("");
-  const [vegetarian, setVegetarian] = useState("");
-  const [glutenFree, setGlutenFree] = useState("");
-  const [sugarFree, setSugarFree] = useState("");
-  const [dairyFree, setDairyFree] = useState("");
+  const [vegan, setVegan] = useState(false);
+  const [vegetarian, setVegetarian] = useState(false);
+  const [glutenFree, setGlutenFree] = useState(false);
+  const [sugarFree, setSugarFree] = useState(false);
+  const [dairyFree, setDairyFree] = useState(false);
   const [budget, setBudget] = useState("");
   // const [member, setMember] = useState("tier1");
   const [member, setMember] = useState(false);
 
   const navigate = useNavigate();
 
-  // const handleMember = (val) => {
-  //   console.log(val);
+  const handleMember = (val) => {
 
-  //   if(val === "Member"){
-  //     setMember(true);
-  //   } else {
-  //     setMember(false);
-  //   }
-  // }
+    if(val === "Member"){
+      setMember(true);
+    } else {
+      setMember(false);
+    }
+  }
 
-  const goToShop = () => {
-    navigate("/shop");
+  const goToShop = (test) => {
+
+    const info = [vegan, vegetarian, glutenFree, sugarFree, dairyFree, budget, member];
+    navigate("/shop", {state: info});
   };
 
   return (
@@ -84,40 +85,40 @@ const Home = () => {
               <label for="vegan">Vegan</label>
               <input
                 type="checkbox"
-                checked={vegan === "vegan"}
+                checked={vegan === true}
                 onChange={() => {
-                  if (vegan === "vegan") setVegan("");
-                  else setVegan("vegan");
+                  if (vegan === true) setVegan(false);
+                  else setVegan(true);
                 }}
               />
               <br></br>
               <label for="vegetarian">Vegetarian</label>
               <input
                 type="checkbox"
-                checked={vegetarian === "vegetarian"}
+                checked={vegetarian === true}
                 onChange={() => {
-                  if (vegetarian === "vegetarian") setVegetarian("");
-                  else setVegetarian("vegetarian");
+                  if (vegetarian === true) setVegetarian(false);
+                  else setVegetarian(true);
                 }}
               />
               <br></br>
               <label for="dairy">Dairy Free</label>
               <input
                 type="checkbox"
-                checked={dairyFree === "dairyFree"}
+                checked={dairyFree === true}
                 onChange={() => {
-                  if (dairyFree === "dairyFree") setDairyFree("");
-                  else setDairyFree("dairyFree");
+                  if (dairyFree === true) setDairyFree(false);
+                  else setDairyFree(true);
                 }}
               />
               <br></br>
               <label for="glutenFree">Gluten Free</label>
               <input
                 type="checkbox"
-                checked={glutenFree === "glutenFree"}
+                checked={glutenFree === true}
                 onChange={() => {
-                  if (glutenFree === "glutenFree") setGlutenFree("");
-                  else setGlutenFree("glutenFree");
+                  if (glutenFree === true) setGlutenFree(false);
+                  else setGlutenFree(true);
                 }}
               />
 
@@ -125,10 +126,10 @@ const Home = () => {
               <label for="sugarFree">Sugar Free</label>
               <input
                 type="checkbox"
-                checked={sugarFree === "sugarFree"}
+                checked={sugarFree === true}
                 onChange={() => {
-                  if (sugarFree === "sugarFree") setSugarFree("");
-                  else setSugarFree("sugarFree");
+                  if (sugarFree === true) setSugarFree(false);
+                  else setSugarFree(true);
                 }}
               />
             </div>
