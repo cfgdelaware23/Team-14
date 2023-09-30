@@ -8,7 +8,6 @@ function Cart() {
             <p>Cart</p>
         </div>
             <CartBox />
-            <Footer />
         </>
     )
 }

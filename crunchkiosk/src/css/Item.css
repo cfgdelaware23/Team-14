@@ -1,9 +1,12 @@
 .item {
     margin-top: 2px;
     border-bottom: 2px solid black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px; 
+    align-items: center;
+    padding: 5px;
+
 }
 
 .itemName {
@@ -11,9 +14,9 @@
 }
 
 .itemPrice {
-    margin: auto;
+  text-align: center;
 }
 
 .itemQuantity {
-    text-align: right;
+  text-align: right;
 }
