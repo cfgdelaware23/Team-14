@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import '../css/Footer.css'
-import { Link } from 'react-router-dom'
-
-const Footer = () => {
-    const [total,setTotal] = useState(0);
-=======
 import React, { useState } from "react";
 import "../css/Footer.css";
 
+import { FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [total, setTotal] = useState(0);
->>>>>>> ce6b1db (update Home)
 
   return (
     <div className="footer-container">
