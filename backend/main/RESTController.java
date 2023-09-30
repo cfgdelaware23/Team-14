@@ -28,6 +28,7 @@ public class RESTController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+
     @RequestMapping(value="/updateDiscount", method=RequestMethod.PATCH)
     public ResponseEntity updateDiscountedPrice(Integer id, Integer price) {
         ItemEntity item = itemRepository.findById(id).get();
@@ -71,11 +72,16 @@ public class RESTController {
             results.add(itemResult);
         }
         return new ResponseEntity(results, HttpStatus.OK);
+    }
 
+    @RequestMapping(value="/newItem", method=RequestMethod.POST)
+    public ResponseEntity postNewItem(ItemEntity itemEntity) {
+        itemRepository.save(itemEntity);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @RequestMapping(value="/post", method= RequestMethod.POST)
-    public HttpStatus postItems() {
+    public HttpStatus postBaseItems() {
         //fill database with fruits
         saveDataHelper("Apple",
                 1.50, 0.50,
