@@ -7,36 +7,33 @@ import { useEffect } from 'react';
 import Aos from 'aos';
 import axios from 'axios';
 import item from "../components/Item";
+import { useLocation } from 'react-router-dom';
 
 
 function Selection() {
     //const [category, setCategory] = useState("");
+    const location = useLocation();
+
     const [items, setItems] = useState([]);
+    const [category, setCategory] = useState(location.state[7]);
+    const [cart, setCart] = useState([]);
 
-    const category = "Fruit";
+    
 
-    //setCategory("fruit");
+    const [userData,setUserData] = useState(location.state);
 
-    const [userData,setUserData] = useState([
-        "False",
-        "FRUIT",
-        60,
-        "False",
-        "False",
-        "False",
-        "False",
-        "False",
-    ]);
+    console.log(userData);
+
     const fetchData = async () => {
     const dataToSend = {
         membership: userData[0],
-        category: userData[1],
-        budget: userData[2],
-        glutenFree: userData[3],
-        dairyFree: userData[4],
-        vegan: userData[5],
-        vegetarian: userData[6],
-        sugarFree: userData[7],
+        category: userData[7],
+        budget: userData[1],
+        glutenFree: userData[2],
+        dairyFree: userData[3],
+        vegan: userData[4],
+        vegetarian: userData[5],
+        sugarFree: userData[6],
     };
 
         try{
@@ -47,17 +44,19 @@ function Selection() {
             console.log(error);
             console.error("error sending data", error);
         }
-        // try {
-        //     const response = await fetch({sample});
-        //     const data = await response.json();
-        //     setItems(JSON.parse({sample}));
-        //
-        // } catch (error) {
-        //     console.error('Error fetching data:', error);
-        // }
+        
     };
 
     fetchData();
+
+    const addToCart = () => {
+        console.log("add to cart");
+    };
+
+    const removeFromCart = () => {
+        console.log("remove from cart");
+    };
+
 
     // variable that keeps track of the user's window size width and height
     const [width, setWidth]   = useState(window.innerWidth);
@@ -93,7 +92,7 @@ function Selection() {
             <h1>{category}</h1>
             {/*{console.log("!!!!")}*/}
             <div className='main'>
-                {console.log(items[0])}
+                {/* {console.log(items[0])} */}
                 {items.map((item) => (
                     <div className="item-grid">
                         {/*<div className="item-name">{item.charAt(0).toUpperCase() + item.slice(1)}</div>*/}
@@ -101,8 +100,8 @@ function Selection() {
                         <div className="item-name">{item.name}</div>
                         <div className="item-price">${parseFloat(item.price).toFixed(2)}</div>
                         <div className='button-container'>
-                        <div className='add-button'>Add</div>
-                        <div className='remove-button'>Remove</div>
+                        <div className='add-button' onClick={addToCart}>Add</div>
+                        <div className='remove-button' onClick={removeFromCart}>Remove</div>
                         </div>
                     </div>
                 ))}

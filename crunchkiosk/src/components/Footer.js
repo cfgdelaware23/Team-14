@@ -19,7 +19,7 @@ const Footer = () => {
         </Link>
       </div>
 
-      <p>Total: ${total}</p>
+      <p className = "total">Total: ${total}</p>
     </div>
   );
 };
