@@ -1,71 +1,54 @@
 [
-    {
-        "item": "apple",
-        "price": 1
+    {   "name": "Apple",
+        "price": 1.99
     },
-    {
-        "item": "pear",
-        "price": 2
+    {   "name": "Orange",
+        "price": 2.99
     },
-    {
-        "item": "banana",
-        "price": 3
+    {   "name": "Banana",
+        "price": 0.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Pineapple",
+        "price": 3.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Mango",
+        "price": 4.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Grapes",
+        "price": 2.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Watermelon",
+        "price": 5.99
     },
-    {
-        "item": "apple",
-        "price": 1
+    {   "name": "Strawberry",
+        "price": 3.99
     },
-    {
-        "item": "pear",
-        "price": 2
+    {   "name": "Blueberry",
+        "price": 4.99
     },
-    {
-        "item": "banana",
-        "price": 3
+    {   "name": "Raspberry",
+        "price": 3.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Blackberry",
+        "price": 4.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Cherry",
+        "price": 2.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Peach",
+        "price": 3.99
     },
-    {
-        "item": "item4",
-        "price": 4
+    {   "name": "Pear",
+        "price": 2.99
     },
-    {
-        "item": "apple",
-        "price": 1
+    {   "name": "Lemon",
+        "price": 1.99
     },
-    {
-        "item": "pear",
-        "price": 2
+    {   "name": "Lime",
+        "price": 1.99
     },
-    {
-        "item": "banana",
-        "price": 3
+    {   "name": "Kiwi",
+        "price": 2.99
     }
 
 ]

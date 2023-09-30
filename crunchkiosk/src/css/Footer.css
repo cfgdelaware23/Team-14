@@ -5,7 +5,7 @@
     width: 100vw;
     height: 80px;
     margin-top: 10vw;
-    color: rgb(0, 0, 0);
+    color: #f7efdd;
     font-size: 14px;
 
     display: flex;
@@ -48,7 +48,7 @@
 
 
 .view-cart {
-    background-color: #4de5bc;
+    background-color: #f7efdd;
     border: none;
     color: black;
     padding: 10px 20px;
@@ -65,8 +65,10 @@
 }
 
 .total {
-    background-color: lightgrey;
+    background-color: #f7efdd;
+    color: black;
     padding: 5px 10px;
+    font-weight: 100;
     border-radius: 5px;
 }
 
