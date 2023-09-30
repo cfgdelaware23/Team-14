@@ -1,9 +1,11 @@
 package main;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.Setter;
 
 @Setter
+@Getter
 @Table(name="items")
 @Entity
 public class ItemEntity {

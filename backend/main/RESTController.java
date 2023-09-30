@@ -1,17 +1,57 @@
 package main;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class RESTController {
     @Autowired
     ItemRepository itemRepository;
 
+    @RequestMapping(value="/get", method=RequestMethod.GET)
+    public ResponseEntity getItems(RequestItems requestItems) {
+        List<ItemEntity> entities = itemRepository.findAll();
+        List<ItemResult> results = new ArrayList<>();
+        List<ItemEntity> current = new ArrayList<>();
+        boolean isMember = requestItems.membership;
+        if(requestItems.dairyFree) {
+            current = (List<ItemEntity>) entities.stream().filter(itemEntity -> itemEntity.isDairyFree());
+        }
+        if(requestItems.glutenFree) {
+            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isGlutenFree());
+        }
+        if(requestItems.vegan) {
+            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isVegan());
+        }
+        if(requestItems.vegetarian) {
+            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isVegetarian());
+        }
+        if(requestItems.sugarFree) {
+            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isSugarFree());
+        }
+        current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.getCategory() == requestItems.category);
+
+        for(ItemEntity itemEntity: current) {
+            ItemResult itemResult = new ItemResult();
+            itemResult.setName(itemEntity.getName());
+            if (isMember) {
+                itemResult.setPrice(itemEntity.getDiscounted_price());
+            }
+            else {
+                itemResult.setPrice(itemEntity.getFull_price());
+            }
+            results.add(itemResult);
+        }
+        return new ResponseEntity(results, HttpStatus.OK);
+
+    }
 
     @RequestMapping(value="/post", method= RequestMethod.POST)
     public HttpStatus postItems() {

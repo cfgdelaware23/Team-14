@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 public class RequestItems {
     boolean membership;
+    FoodCategory category;
     int budget;
     boolean glutenFree;
     boolean dairyFree;
