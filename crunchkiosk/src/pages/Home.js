@@ -39,6 +39,7 @@ const Home = () => {
       <br></br>
       <div className="shopLink">
           <Link to="/shop">Shop page</Link>
+          
       
 
       <div>
