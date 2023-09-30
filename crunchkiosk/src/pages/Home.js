@@ -16,6 +16,8 @@ const Home = () => {
   const [sugarFree, setSugarFree] = useState(false);
   const [dairyFree, setDairyFree] = useState(false);
   const [budget, setBudget] = useState("");
+
+  //TODO: MEMBER DOESNT WORK
   const [member, setMember] = useState(false);
 
   const navigate = useNavigate();

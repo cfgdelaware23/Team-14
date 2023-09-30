@@ -25,7 +25,7 @@ import {useLocation} from 'react-router-dom';
       </div> */}
 
       
-function Shop( {route}) {
+function Shop() {
   const navigate = useNavigate();
   const location = useLocation();
 
