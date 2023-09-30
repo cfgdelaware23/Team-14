@@ -23,13 +23,13 @@ function Shop() {
 
   return (
     <>
-      <div>
+      {/* <div>
         {userData.map((label, index) => (
           <div key={label}>
             {label}: {userData[index]}
           </div>
         ))}
-      </div>
+      </div> */}
       <div className="shopList">
         <p>Shop</p>
       </div>
