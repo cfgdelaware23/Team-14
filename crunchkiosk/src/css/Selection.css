@@ -1,7 +1,8 @@
 body{background: url("../assets/bg.png");
   background-size: cover;
   height: 100%;
-  width: 100%;}
+  width: 100%;
+}
 
 
 /* .main-container {
@@ -49,12 +50,6 @@ h1 {
 
 /* Selection.css */
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-}
 
 h1 {
   text-align: center;
@@ -72,7 +67,7 @@ h1 {
 }
 
 .item-grid {
-  background-color: #fff;
+  background-color: #FAFAFA;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;

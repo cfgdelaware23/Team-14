@@ -1,79 +1,4 @@
-/* .pricing_budget {
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 50px;
-  z-index: 1000;
-  background-color: rgba(0, 80, 1, 0.027);
-  border-bottom: 0.5px solid black;
-  backdrop-filter: blur(1000px);
-}
 
-.shopLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.pricingSelect {
-  padding-right: 100px;
-  padding-left: 10px;
-}
-
-.budgetTitle {
-  padding-left: 100px;
-  padding-right: 10px;
-  color: rgb(54, 54, 241);
-  font-size: 35px;
-}
-
-.pricingTitle {
-  color: rgb(54, 54, 241);
-  font-size: 35px;
-  border-radius: 15px;
-  font-size: 35px;
-}
-
-
-.bottom {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-}
-
-.bottom .linked:link,
-.linked:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.bottom linked:hover,
-.linked:active {
-  background-color: red;
-}
-
-.box div {
-  border: 1px solid black;
-  width: 500px;
-  height: 300px;
-}
- */
-/* Home.css */
-
-/* Background styling */
-
-
-/* Pricing section styling */
 .pricing_budget {
   margin-top: 20px;
   margin-left: 40px;
@@ -82,6 +7,12 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pricingTitle {

@@ -11,7 +11,7 @@ function Selection() {
     //const [category, setCategory] = useState("");
     const [items, setItems] = useState([]);
 
-    const category = "fruit";
+    const category = "Fruit";
 
     //setCategory("fruit");
 
@@ -64,7 +64,7 @@ function Selection() {
             <div className='main'>
                 {sample.map(({ item, price }) => (
                     <div className="item-grid">
-                        <div className="item-name">{item}</div>
+                        <div className="item-name">{item.charAt(0).toUpperCase() + item.slice(1)}</div>
                         <div className="item-price">${parseFloat(price).toFixed(2)}</div>
 
                         <div className='button-container'>
