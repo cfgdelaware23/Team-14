@@ -1,13 +1,11 @@
-body {
-  background-color: white;
-}
+
 body {
     background: url("../assets/bg.png");
   background-size: cover;
   height: 100%;
   width: 100%;
 }
-
+/* 
 .shopList {
   font-size: 40px;
   text-align: center;
@@ -43,4 +41,43 @@ body {
 .shopItem:target {
   background-color: rgb(15, 14, 14);
   color: white;
+} */
+/* Shop.css */
+
+/* Container for the entire shop page */
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Title styling */
+.shopList {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Individual shop items */
+.shopItem {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Link styling */
+.shopItem a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+/* Link hover effect */
+.shopItem a:hover {
+  color: #007bff; /* Blue color on hover */
 }
