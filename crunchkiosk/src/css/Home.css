@@ -2,11 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Inter);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 .pricing_budget {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 40px;
   margin-right: 40px;
   background-color: #FAFAFA;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Inter;
@@ -21,6 +21,21 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.crunchKiosk{
+  font-size: 40px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  font-family: Inter; 
+}
+
+.instructions{
+  font-size: 24px;
+  color: #333;
+  font-family: Inter;  
 }
 
 .pricingTitle {
@@ -65,7 +80,7 @@ h1 {
 .shopLink {
   font-family: Inter;
   background-color: #ffffff;
-  padding: 20px;
+  padding: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
@@ -85,7 +100,7 @@ h1 {
 /* Bottom section styling */
 .bottom {
   text-align: center;
-  margin-top: 85px;
+  margin-top: 40px;
   transform: scale(1.4);
 }
 
