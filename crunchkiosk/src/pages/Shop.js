@@ -1,11 +1,13 @@
-function Shop( props ) {
-    // const itemsArray = []
-
+import "../css/Shop.css";
+function Shop() {
     return ( 
         <>
-
+        <div className = "shopList">
             <p>Shop</p>
-            {/* <Selection /> */}
+        </div>
+        <div className = "shopItem">
+            <p>Shop</p>
+        </div>
         </>
     )
 }
