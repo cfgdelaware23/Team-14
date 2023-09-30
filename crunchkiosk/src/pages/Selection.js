@@ -15,48 +15,41 @@ function Selection() {
     const location = useLocation();
 
     const [items, setItems] = useState([]);
-    // const [category, setCategory] = useState(location.state[7]);
+    const [category, setCategory] = useState(location.state[7]);
     const [cart, setCart] = useState([]);
 
     
 
-    // const [userData,setUserData] = useState(location.state);
+    const [userData,setUserData] = useState(location.state);
 
-    const [category, setCategory] = useState("FRUIT");
-    const [userData,setUserData] = useState([sample]);
-
-    useEffect(() => {
-    console.log(category);
-    setCategory("FRUIT");
-    setUserData(sample);
-    }, []);
+    
 
     // console.log(userData);
 
-    // const fetchData = async () => {
-    // const dataToSend = {
-    //     membership: userData[0],
-    //     category: userData[7],
-    //     budget: userData[1],
-    //     glutenFree: userData[2],
-    //     dairyFree: userData[3],
-    //     vegan: userData[4],
-    //     vegetarian: userData[5],
-    //     sugarFree: userData[6],
-    // };
+    const fetchData = async () => {
+    const dataToSend = {
+        membership: userData[0],
+        category: userData[7],
+        budget: userData[1],
+        glutenFree: userData[2],
+        dairyFree: userData[3],
+        vegan: userData[4],
+        vegetarian: userData[5],
+        sugarFree: userData[6],
+    };
 
-    //     try{
-    //         const response = await axios.post('http://localhost:8080/selection',dataToSend);
-    //         setItems(response.data);
-    //         // console.log(response.data);
-    //     }catch(error){
-    //         console.log(error);
-    //         console.error("error sending data", error);
-    //     }
+        try{
+            const response = await axios.post('http://localhost:8080/selection',dataToSend);
+            setItems(response.data);
+            // console.log(response.data);
+        }catch(error){
+            console.log(error);
+            console.error("error sending data", error);
+        }
         
-    // };
+    };
 
-    // fetchData();
+    fetchData();
 
     const addToCart = () => {
         console.log("add to cart");
@@ -72,11 +65,11 @@ function Selection() {
     return (
         <>
         <div className='select-body'>
-            <h1>{category}</h1>
+            <h1 className='cat'>{category}</h1>
             {/*{console.log("!!!!")}*/}
             <div className='main'>
                 {/* {console.log(items[0])} */}
-                {userData.map((item) => (
+                {items.map((item) => (
                     <div className="item-grid">
                         {/*<div className="item-name">{item.charAt(0).toUpperCase() + item.slice(1)}</div>*/}
                         {/*<div className="item-price">${parseFloat(price).toFixed(2)}</div>*/}

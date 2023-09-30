@@ -60,6 +60,11 @@ h1 {
   color: #333;
 }
 
+.cat{
+  color:#f7efdd;
+  font-weight: bold;
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +74,7 @@ h1 {
 }
 
 .item-grid {
-  background-color: #fff;
+  background-color: #f7efdd;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
