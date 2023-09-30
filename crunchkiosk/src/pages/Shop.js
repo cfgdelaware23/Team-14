@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import Context from "./Context";
+import axios from 'axios';
 
 // {
 //     vegan = "False",
@@ -27,14 +28,54 @@ function Shop() {
 
   const [total, setTotal] = useState(0);
 
-  const userData = useContext(Context);
+  const [responseData,setResponseData] = useState([]);
+
+  const [userData, setUserData] = useState([
+    "False",
+    "FRUIT",
+    60,
+    "False",
+    "False",
+    "False",
+    "False",
+    "False",
+  ]);
+
+  const sendDataToBackend = async () => {
+    const dataToSend = {
+      // boolean membership;
+    // FoodCategory category;
+    // int budget;
+    // boolean glutenFree;
+    // boolean dairyFree;
+    // boolean vegan;
+    // boolean vegetarian;
+    // boolean sugarFree;
+      membership: userData[0],
+      category: userData[1],
+      budget: userData[2],
+      glutenFree: userData[3],
+      dairyFree: userData[4],
+      vegan: userData[5],
+      vegetarian: userData[6],
+      sugarFree: userData[7],
+    };
+  
+    try {
+      const response = await axios.post('http://localhost:3000/selection', dataToSend);
+      console.log(response.data);
+      setResponseData(response.data); // Handle the response from the server
+    } catch (error) {
+      console.error('Error sending data:', error);
+    }
+  };
 
   const goToSelection = () => {
+    sendDataToBackend();
     navigate("/selection");
   };
 
-
-
+  
 
   return (
     <>
