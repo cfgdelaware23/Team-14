@@ -13,7 +13,9 @@ const Footer = () => {
         <img src={require("../assets/logo.png")} />
         <span>Crunch Kiosk</span>
         <Link to="/cart" className="foot-social">
-          View Cart
+          <div className="view-cart">
+            View Cart
+          </div>
         </Link>
       </div>
 
