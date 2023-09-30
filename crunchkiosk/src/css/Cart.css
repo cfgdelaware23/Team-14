@@ -3,8 +3,8 @@ body{background: url("../assets/bg.png");
   height: 100%;
   width: 100%;}
 
-  .cartTitle{
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-  }
+.cartTitle{
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
