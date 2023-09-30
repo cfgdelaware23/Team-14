@@ -1,5 +1,6 @@
 import CartBox from "../components/CartBox";
 import Footer from "../components/Footer";
+import "../css/Cart.css";
 function Cart() {
     return ( 
         <>
