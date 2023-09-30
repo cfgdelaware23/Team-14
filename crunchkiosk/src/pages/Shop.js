@@ -1,3 +1,6 @@
+
+
+import "../css/Shop.css";
 function Shop() {
     return ( 
         <>
