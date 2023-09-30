@@ -1,13 +1,12 @@
 import '../css/Item.css'
-function Item({itemName,itemPrice,itemQuantity}) {
+function Item({item, index}) {
+
     return (
-        <>
-            <div className='item'> 
-                <p className="itemName">{itemName}</p>
-                <p className="itemPrice">{itemPrice}</p>
-                <p className="itemQuantity">{itemQuantity}</p>
-            </div>
-        </>
+        <div className="item" key={index}>
+            <div className="item-name">{item[0]}</div>
+            <div className="item-quantity">Quantity: {item[2]}</div>
+            <div className="item-price">${(item[1] * item[2]).toFixed(2)}</div>
+        </div>
     )
 }
 
