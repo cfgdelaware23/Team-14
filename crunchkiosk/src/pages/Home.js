@@ -31,7 +31,7 @@ const Home = () => {
     <Context.Provider
       value={[vegan, vegetarian, glutenFree, sugarFree, dairyFree, budget, member]}
     >
-      <>
+      <div class='BACKGROUND'>
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
 
@@ -131,7 +131,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </>
+      </div>
     </Context.Provider>
   );
 };
