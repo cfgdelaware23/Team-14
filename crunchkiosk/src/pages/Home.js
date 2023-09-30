@@ -33,7 +33,6 @@ const Home = () => {
       value={[vegan, vegetarian, glutenFree, sugarFree, dairyFree, budget, member]}
     >
       <>
-      <div className="BACKGROUND"/>
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
 
