@@ -1,5 +1,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Inter);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 .pricing_budget {
   margin-top: 20px;
   margin-left: 40px;
@@ -8,8 +9,14 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Inter;
 }
-
+.p{
+  font-family: Inter;
+}
+h1 {
+  font-family: Roboto;
+}
 .cardContainer{
   display: flex;
   align-items: center;
@@ -50,11 +57,13 @@
   font-size: 18px;
   color: #333;
   margin-top: 8px;
+  font-family: Inter;
 
 }
 
 /* Dietary Restrictions section styling */
 .shopLink {
+  font-family: Inter;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
