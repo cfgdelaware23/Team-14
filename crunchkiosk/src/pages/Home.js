@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "../components/Footer";
 import Shop from "./Shop";
 import Context from "./Context";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [vegan, setVegan] = useState("");
@@ -18,6 +19,8 @@ const Home = () => {
   // const [member, setMember] = useState("tier1");
   const [member, setMember] = useState(false);
 
+  const navigate = useNavigate();
+
   // const handleMember = (val) => {
   //   console.log(val);
 
@@ -27,6 +30,10 @@ const Home = () => {
   //     setMember(false);
   //   }
   // }
+
+  const goToShop = () => {
+    navigate("/shop");
+  };
 
   return (
     <Context.Provider
@@ -126,19 +133,8 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="bottom">
-            <Link className="linked" to="/shop">
-              {/* <Shop
-              vegan={vegan}
-              glutenFree={glutenFree}
-              sugarFree={sugarFree}
-              dairyFree={dairyFree}
-              budget={budget}
-              member={member}
-            /> */}
-              {/*  supposed to render new component with prop passed not sure how to do this */}
-              SHOP
-            </Link>
+          <div className="bottom linked" onClick={goToShop}>
+            SHOP
           </div>
         </div>
       </>

@@ -74,7 +74,14 @@
 /* Bottom section styling */
 .bottom {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 85px;
+  transform: scale(1.4);
+}
+
+.bottom:hover{
+  cursor:pointer;
+  transform: scale(1.6);
+  transition: transform 330ms ease-in-out;
 }
 
 .linked {
@@ -103,6 +110,6 @@
   margin-right: 10px;
 }
 
-.box{
+.box {
   background-color: #FAFAFA;
 }
