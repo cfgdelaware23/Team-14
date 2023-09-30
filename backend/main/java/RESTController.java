@@ -66,7 +66,7 @@ public class RESTController {
             current = current.stream().filter(itemEntity -> itemEntity.isSugarFree()).toList();
         }
 
-       // current = current.stream().filter(itemEntity -> itemEntity.getCategory() == requestItems.category).toList();
+       current = current.stream().filter(itemEntity -> itemEntity.getCategory() == requestItems.category).toList();
 
         for(ItemEntity itemEntity: current) {
             ItemResult itemResult = new ItemResult();
@@ -111,6 +111,46 @@ public class RESTController {
                 3.00, 1.50,
                 FoodCategory.FRUIT, true, true,
                 true, true, true);
+        saveDataHelper("Strawberries",
+                2.00, 1.00,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Pineapple",
+                2.50, 1.25,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Mango",
+                1.75, 0.70,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Watermelon",
+                2.25, 1.10,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Peaches",
+                1.80, 0.90,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Blueberries",
+                2.50, 1.20,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Raspberries",
+                3.00, 1.50,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Kiwi",
+                1.50, 0.75,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Cantaloupe",
+                2.75, 1.35,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);
+        saveDataHelper("Apricots",
+                2.00, 0.90,
+                FoodCategory.FRUIT, true, true,
+                true, true, true);                
 
         //fill database with tomatoes
         saveDataHelper("Tomato",
@@ -129,6 +169,46 @@ public class RESTController {
                 1.00, 0.50,
                 FoodCategory.VEGETABLE, true, true,
                 true, true, true);
+        saveDataHelper("Broccoli",
+                1.75, 0.85,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Spinach",
+                2.00, 1.00,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Bell Pepper",
+                1.50, 0.75,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Zucchini",
+                1.80, 0.90,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Eggplant",
+                2.20, 1.10,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Cauliflower",
+                1.90, 0.95,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Asparagus",
+                2.50, 1.20,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Cucumber",
+                1.25, 0.60,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Artichoke",
+                2.75, 1.35,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
+        saveDataHelper("Brussels Sprouts",
+                2.25, 1.10,
+                FoodCategory.VEGETABLE, true, true,
+                true, true, true);
 
         //fill database with carbs
         saveDataHelper("Cereal",
@@ -142,6 +222,38 @@ public class RESTController {
         saveDataHelper("Corn Tortilla",
                 3.00, 1.50,
                 FoodCategory.CARBOHYDRATE, true, true,
+                true, true, true);
+        saveDataHelper("Quinoa",
+                3.00, 1.50,
+                FoodCategory.CARBS, true, true,
+                true, true, true);
+        saveDataHelper("Oats",
+                1.75, 0.85,
+                FoodCategory.CARBS, true, true,
+                true, true, true);
+        saveDataHelper("Sweet Potatoes",
+                1.50, 0.75,
+                FoodCategory.CARBS, true, true,
+                true, true, false);
+        saveDataHelper("Barley",
+                2.20, 1.10,
+                FoodCategory.CARBS, false, true,
+                true, true, true);
+        saveDataHelper("Millet",
+                1.90, 0.95,
+                FoodCategory.CARBS, true, true,
+                true, true, true);
+        saveDataHelper("Bulgur",
+                2.50, 1.20,
+                FoodCategory.CARBS, false, true,
+                true, true, true);
+        saveDataHelper("Potatoes",
+                1.60, 0.80,
+                FoodCategory.CARBS, true, true,
+                true, true, true);
+        saveDataHelper("Couscous",
+                2.80, 1.40,
+                FoodCategory.CARBS, false, true,
                 true, true, true);
 
         //fill database with proteins
@@ -165,6 +277,22 @@ public class RESTController {
                 3.00, 1.50,
                 FoodCategory.PROTEIN, true, false,
                 false, true, true);
+        saveDataHelper("Lentils",
+                1.50, 0.75,
+                FoodCategory.PROTEIN, true, true,
+                true, true, true);
+        saveDataHelper("Lean Beef",
+                4.25, 2.50,
+                FoodCategory.PROTEIN, true, true,
+                false, false, true);
+        saveDataHelper("Chickpeas",
+                1.75, 0.90,
+                FoodCategory.PROTEIN, true, true,
+                true, true, true);
+        saveDataHelper("Turkey",
+                3.75, 2.25,
+                FoodCategory.PROTEIN, true, true,
+                false, false, true);
 
         //fill database with dairy
         saveDataHelper("Whole Milk",
@@ -183,6 +311,38 @@ public class RESTController {
                 2.00, 1.00,
                 FoodCategory.DAIRY, true, false,
                 false, true, false);
+        saveDataHelper("Almond Milk",
+                2.50, 1.20,
+                FoodCategory.DAIRY_ALTERNATIVE, true, true,
+                true, true, false);
+        saveDataHelper("Coconut Milk",
+                3.00, 1.50,
+                FoodCategory.DAIRY_ALTERNATIVE, true, true,
+                true, true, false);
+        saveDataHelper("Soy Milk",
+                2.50, 1.25,
+                FoodCategory.DAIRY_ALTERNATIVE, true, true,
+                true, true, false);
+        saveDataHelper("Cheddar Cheese",
+                3.75, 2.00,
+                FoodCategory.DAIRY, false, false,
+                false, true, true);
+        saveDataHelper("Cashew Milk",
+                2.75, 1.35,
+                FoodCategory.DAIRY_ALTERNATIVE, true, true,
+                true, true, true);
+        saveDataHelper("Plant-Based Yogurt",
+                2.50, 1.25,
+                FoodCategory.DAIRY_ALTERNATIVE, true, true,
+                true, true, false);
+        saveDataHelper("Vegan Cream Cheese",
+                2.25, 1.10,
+                FoodCategory.DAIRY_ALTERNATIVE, true, true,
+                true, true, true);
+        saveDataHelper("Butter",
+                2.00, 1.00,
+                FoodCategory.DAIRY_ALTERNATIVE, true, false,
+                false, true, true);
 
         //fill database with bevs
         saveDataHelper("2 L Soda",
@@ -197,6 +357,39 @@ public class RESTController {
                 3.50, 1.80,
                 FoodCategory.BEVERAGE, false, false,
                 false, true, false);
+        saveDataHelper("Green Tea",
+                1.50, 0.75,
+                FoodCategory.DRINK, true, true,
+                true, true, true);
+        saveDataHelper("Lemonade",
+                2.25, 1.10,
+                FoodCategory.DRINK, true, true,
+                true, true, false);
+        saveDataHelper("Iced Coffee",
+                3.00, 1.50,
+                FoodCategory.DRINK, true, true,
+                true, true, true);
+        saveDataHelper("Apple Juice",
+                2.75, 1.35,
+                FoodCategory.DRINK, true, true,
+                true, true, false);
+        saveDataHelper("Cranberry Juice",
+                2.50, 1.20,
+                FoodCategory.DRINK, true, true,
+                true, true, false);
+        saveDataHelper("Coconut Water",
+                2.00, 1.00,
+                FoodCategory.DRINK, true, true,
+                true, true, true);
+        saveDataHelper("Mango Smoothie",
+                3.50, 2.00,
+                FoodCategory.DRINK, true, false,
+                true, true, false);
+        saveDataHelper("Iced Tea",
+                1.75, 0.90,
+                FoodCategory.DRINK, true, true,
+                true, true, false);
+        
 
         //fill database with snacks
         saveDataHelper("Pretzels",
@@ -215,6 +408,34 @@ public class RESTController {
                 3.20, 1.70,
                 FoodCategory.SNACK, true, true,
                 true, true, true);
+        saveDataHelper("Trail Mix",
+                3.50, 2.00,
+                FoodCategory.SNACK, true, true,
+                true, true, false);
+        saveDataHelper("Popcorn",
+                1.50, 0.75,
+                FoodCategory.SNACK, true, true,
+                true, true, true);
+        saveDataHelper("Tortilla Chips",
+                2.50, 1.20,
+                FoodCategory.SNACK, true, true,
+                true, true, true);
+        saveDataHelper("Peanut Butter Crackers",
+                1.75, 0.90,
+                FoodCategory.SNACK, false, true,
+                true, true, false);
+        saveDataHelper("Cheese Puffs",
+                2.25, 1.10,
+                FoodCategory.SNACK, true, false,
+                false, true, true);
+        saveDataHelper("Beef Jerky",
+                4.00, 2.00,
+                FoodCategory.SNACK, true, true,
+                false, false, true);
+        saveDataHelper("Raisins",
+                1.75, 0.90,
+                FoodCategory.SNACK, true, true,
+                true, true, false);
         return HttpStatus.ACCEPTED;
     }
 
