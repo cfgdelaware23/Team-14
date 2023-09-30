@@ -146,9 +146,10 @@ footer {
 }
 
 .add-button, .remove-button{
+  color: black;
+  opacity: 70%;
   background-color: #007bff;
   border: none;
-  color: white;
   padding: 6px 10px;
   margin: 4px;
   text-align: center;
@@ -161,5 +162,6 @@ footer {
 
 .add-button:hover, .remove-button:hover{
   transform: scale(1.05);
+  background-color: #416cbd;
 }
 

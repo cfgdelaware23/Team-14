@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Inter);
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+
 .box {
     display: flex;
     flex-direction: column;
@@ -22,19 +23,19 @@
 }
 
 .item-name {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     font-family: Inter
 }
 
 .item-price {
-    font-size: 14px;
+    font-size: 20px;
     color: #555;
     font-family: Inter
 }
 
 .item-quantity {
-    font-size: 14px;
+    font-size: 20px;
     color: #555;
     font-family: Inter
 }

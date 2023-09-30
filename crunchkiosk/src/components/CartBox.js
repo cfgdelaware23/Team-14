@@ -42,7 +42,7 @@ function CartBox() {
       ))}
       <div className="total">Total: ${total}</div>
       <div>
-        <button className="checkout-button">Print Shoplist</button>
+        <button className="checkout-button" onClick={() => {window.print()}}>Print Shoplist</button>
       </div>
       
     </div>
