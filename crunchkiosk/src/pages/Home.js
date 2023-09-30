@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Home.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Footer from "../components/Footer";
@@ -21,6 +21,7 @@ const Home = () => {
   const [member, setMember] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleMember = (val) => {
     console.log(val);
@@ -32,8 +33,7 @@ const Home = () => {
   }
 
   const goToShop = (test) => {
-
-    const info = [vegan, vegetarian, glutenFree, sugarFree, dairyFree, budget, member];
+    const info = [member, budget, glutenFree, dairyFree, vegan, vegetarian, sugarFree];
     navigate("/shop", {state: info});
   };
 
@@ -135,7 +135,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="bottom linked" onClick={goToShop}>
+          <div className="bottom linked" onClick={() => goToShop()}>
             SHOP
           </div>
         </div>
