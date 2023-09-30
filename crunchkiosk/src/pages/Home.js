@@ -3,6 +3,7 @@ import "../css/Home.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import Shop from "./Shop";
 
 const Home = () => {
   const [vegan, setVegan] = useState("");
@@ -78,8 +79,16 @@ const Home = () => {
           </div>
         </div>
         <div className="bottom">
-          <Link className="linked" to="/shop">
-            Shop page
+          <Link to="/shop">
+            {/* <Shop
+              vegan={vegan}
+              glutenFree={glutenFree}
+              sugarFree={sugarFree}
+              dairyFree={dairyFree}
+              budget={budget}
+              member={member}
+            /> */}
+            {/* gg supposed to render new component with prop passed not sure how to do this */}
           </Link>
         </div>
       </div>
