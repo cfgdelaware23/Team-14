@@ -38,8 +38,8 @@ const Home = () => {
       <br></br>
       <br></br>
       <br></br>
-      <div className="shopLink box">
-        <div>
+      <div>
+        <div className="shopLink box">
           {/* sugar freee vegan gluten free */}
           {/* change value to be what db name col is */}
 
@@ -61,13 +61,13 @@ const Home = () => {
               onChange={() => setDairyFree("dairyFree")}
             />
             <br></br>
-
             <label for="glutenFree">Gluten Free</label>
             <input
               type="checkbox"
               checked={glutenFree === "glutenFree"}
               onChange={() => setGlutenFree("glutenFree")}
             />
+
             <br></br>
             <label for="sugarFree">Sugar Free</label>
             <input
@@ -78,9 +78,10 @@ const Home = () => {
           </div>
         </div>
         <div className="bottom">
-          <Link to="/shop">Shop page</Link>
+          <Link className="linked" to="/shop">
+            Shop page
+          </Link>
         </div>
-        
       </div>
     </>
   );

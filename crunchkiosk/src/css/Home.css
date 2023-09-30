@@ -48,7 +48,23 @@
   height: 2.5rem;
 }
 
+.bottom .linked:link,
+.linked:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.bottom linked:hover,
+.linked:active {
+  background-color: red;
+}
+
 .box div {
   border: 1px solid black;
   width: 500px;
+  height: 300px;
 }
