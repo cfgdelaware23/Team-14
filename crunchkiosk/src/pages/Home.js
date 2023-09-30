@@ -102,17 +102,7 @@ const Home = () => {
           </div>
         </div>
         <div className="bottom">
-          <Link to="/shop">
-            {/* <Shop
-              vegan={vegan}
-              glutenFree={glutenFree}
-              sugarFree={sugarFree}
-              dairyFree={dairyFree}
-              budget={budget}
-              member={member}
-            /> */}
-            {/* gg supposed to render new component with prop passed not sure how to do this */}
-          </Link>
+          <Link className="linked" to="/shop"> Shop Page</Link>
         </div>
       </div>
     </>
