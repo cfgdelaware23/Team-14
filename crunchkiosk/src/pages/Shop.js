@@ -14,13 +14,19 @@ import { useContext } from "react";
 //   }
 
 function Shop() {
-  const [stuff, setStuff] = useState();
   const userData = useContext(Context);
 
   //this is the code to api will be called when we click link to Selection
 
   return (
     <>
+      <div>
+        {userData.map((label, index) => (
+          <div key={label}>
+            {label}: {userData[index]}
+          </div>
+        ))}
+      </div>
       <div className="shopList">
         <p>Shop</p>
       </div>

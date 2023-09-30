@@ -1,37 +1,46 @@
 body {
-    background: url("../assets/bg.png") no-repeat;
+  background-color: white;
+}
+body {
+  background: url("../assets/bg.png") no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
 }
 
-.shopList{
-    font-size: 40px;
-    text-align: center;
-    padding-bottom: 5%;
+.shopList {
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 5%;
 }
 
-.shopItem{
-    background-color: rgba(152, 152, 152, 0);
-    color: black;
-    font-size: 25px;
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    border: black;
-    border-style: solid;
-    padding-bottom: 10px;
-
+.shopItem {
+  background-color: #de5c52;
+  color: black;
+  font-size: 25px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: black;
+  text-decoration: none;
+  border-style: solid;
+  padding-bottom: 10px;
+}
+.shopItem:link,
+.linked:visited {
+  background-color: #de5c52;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.shopItem:hover {
+  background-color: lightgray;
+  color: white;
 }
 
-.shopItem:hover{
-    background-color: lightgray;
-    color: white;
+.shopItem:target {
+  background-color: rgb(15, 14, 14);
+  color: white;
 }
-
-.shopItem:target{
-    background-color: rgb(15, 14, 14);
-    color: white;
-}
-
-
