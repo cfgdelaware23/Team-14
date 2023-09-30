@@ -5,9 +5,9 @@ import Home from "./pages/Home";
 function App() {
   return (
     <div className="App">
-        <p>
+        {/* <p>
           Crunch Kiosk
-        </p>
+        </p> */}
         
         <Home />
     </div>
