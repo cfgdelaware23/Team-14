@@ -30,8 +30,16 @@ function Selection() {
         <div>
             <h1>{category}</h1>
             <div className='main'>
-                {sample.map(({item, price}) => (<Item itemName={item} itemPrice={price} />))}
+                {sample.map(({ item, price }) => (
+                    <div className="item-grid">
+                        <div className="item-name">{item}</div>
+                        <div className="item-price">${parseFloat(price).toFixed(2)}</div>
+                    </div>
+                ))}
             </div>
+            {/* <div className='main'>
+                {sample.map(({item, price}) => (<Item itemName={item} itemPrice={price} />))}
+            </div> */}
             <Footer />
         </div>
     );
