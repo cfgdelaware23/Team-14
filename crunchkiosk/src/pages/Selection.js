@@ -40,7 +40,6 @@ function Selection() {
         try{
             const response = await axios.post('http://localhost:8080/selection',dataToSend);
             setItems(response.data);
-            // console.log(response.data);
         }catch(error){
             console.log(error);
             console.error("error sending data", error);

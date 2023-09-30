@@ -13,7 +13,7 @@ const Home = () => {
   const [glutenFree, setGlutenFree] = useState(false);
   const [sugarFree, setSugarFree] = useState(false);
   const [dairyFree, setDairyFree] = useState(false);
-  const [budget, setBudget] = useState("");
+  const [budget, setBudget] = useState(0);
   const [member, setMember] = useState("false");
   const ANIMALS = ["true", "false"];
 

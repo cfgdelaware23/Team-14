@@ -48,7 +48,7 @@ function Shop() {
   *7: category
   */
   const goToSelection = (category) => {
-
+    console.log([...homeData,category])
     navigate("/selection", {state: [...homeData,category]});
 
   };
