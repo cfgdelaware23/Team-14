@@ -102,7 +102,7 @@ const Home = () => {
           </div>
         </div>
         <div className="bottom">
-          <Link className="linked" to="/shop"> Shop Page</Link>
+          <Link className="linked" to="/shop">Shop Page</Link>
         </div>
       </div>
     </>
