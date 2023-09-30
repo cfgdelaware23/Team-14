@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../css/Selection.css";
 import Footer from '../components/Footer';
 import axios from 'axios';
@@ -6,11 +6,13 @@ import { useLocation } from 'react-router-dom';
 
 
 function Selection() {
-    //const [category, setCategory] = useState("");
+
     const location = useLocation();
 
     const [items, setItems] = useState([]);
+
     const [category, setCategory] = useState(location.state[7]);
+
     const [cart, setCart] = useState([]);
 
     
@@ -22,6 +24,7 @@ function Selection() {
     // console.log(userData);
 
     const fetchData = async () => {
+    
     const dataToSend = {
         membership: userData[0],
         category: userData[7],
@@ -32,6 +35,7 @@ function Selection() {
         vegetarian: userData[5],
         sugarFree: userData[6],
     };
+
 
         try{
             const response = await axios.post('http://localhost:8080/selection',dataToSend);
