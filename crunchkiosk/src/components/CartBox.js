@@ -7,6 +7,10 @@ function CartBox() {
   const myCart = [
     ['apple', 1.00, 2],
     ['sourdough', 2.35, 1],
+    ['plant-based yoghurt', 1.20, 2],
+    ['mango', 1.10, 4],
+    ['sweet potato', 1.50, 2],
+    ['chicken breast', 2.50, 3]
   ];
 
   const [total, setTotal] = useState(0);
