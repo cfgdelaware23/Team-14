@@ -1,9 +1,11 @@
 import '../css/Item.css'
-function Item(props) {
+function Item({itemName,itemPrice,itemQuantity}) {
     return (
         <>
             <div className='item'> 
-                <p>Hello</p>
+                <p>{itemName}</p>
+                <p>{itemPrice}</p>
+                <p>{itemQuantity}</p>
             </div>
         </>
     )
