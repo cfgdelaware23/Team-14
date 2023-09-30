@@ -2,7 +2,6 @@ import React from "react";
 import "../css/Home.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Dropdown from "react-bootstrap/Dropdown";
 
 import Footer from "../components/Footer";
 import Shop from "./Shop";
