@@ -2,6 +2,8 @@ import React from "react";
 import "../css/Home.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown'
+
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -10,18 +12,39 @@ const Home = () => {
   const [sugarFree, setSugarFree] = useState("");
   const [dairyFree, setDairyFree] = useState("");
   const [budget, setBudget] = useState("");
-  const [member, setMember] = useState("tier1");
-
+  // const [member, setMember] = useState("tier1");
+  const [member,setMember] = useState(false);
+  
+  // const handleMember = (val) => {
+  //   console.log(val);
+    
+  //   if(val === "Member"){
+  //     setMember(true);
+  //   } else {
+  //     setMember(false);
+  //   }
+  // }
+  
   return (
     <>
       <div className="pricing_budget">
         <div className="pricingTitle">Pricing Tier:</div>
 
         <div className="pricingSelect">
-          <select onChange={(e) => setMember(e.value)}>
+          <Dropdown >
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Select
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item eventKey="Member">Member</Dropdown.Item>
+              <Dropdown.Item eventKey="Non-Member">Non-Member</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          {/* <select onChange={(e) => setMember(e.value)}>
             <option value="tier1">Member</option>
             <option value="tier2">Non-Member</option>
-          </select>
+          </select> */}
         </div>
 
         <div className="budgetTitle">Budget:</div>

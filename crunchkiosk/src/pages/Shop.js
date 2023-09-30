@@ -19,7 +19,10 @@ function Shop() {
             <p>Proteins</p>
         </div>
         <div className = "shopItem">
-            <p>Dairy/Al</p>
+            <p>Dairy/Alt.</p>
+        </div>
+        <div className = "shopItem">
+            <p>Beverages and Snacks</p>
         </div>
         </>
     )

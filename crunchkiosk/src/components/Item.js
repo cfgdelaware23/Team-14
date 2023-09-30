@@ -3,9 +3,9 @@ function Item({itemName,itemPrice,itemQuantity}) {
     return (
         <>
             <div className='item'> 
-                <p>{itemName}</p>
-                <p>{itemPrice}</p>
-                <p>{itemQuantity}</p>
+                <p className="itemName">{itemName}</p>
+                <p className="itemPrice">{itemPrice}</p>
+                <p className="itemQuantity">{itemQuantity}</p>
             </div>
         </>
     )

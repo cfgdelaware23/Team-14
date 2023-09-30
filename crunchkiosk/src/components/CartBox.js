@@ -3,8 +3,9 @@ import '../css/CartBox.css'
 import Item from './Item';
 function CartBox() {
     const myCart = [
-        ["apple",1.00,2], ["sourdough",2.35,1]
+        ["Item name", "Price", "Quantity"], ["apple",1.00,2], ["sourdough",2.35,1]
     ];
+
 
 
     return(
