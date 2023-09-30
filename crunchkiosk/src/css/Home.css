@@ -1,46 +1,54 @@
-.pricing_budget{
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 50px;
-    z-index: 1000;
-    background-color: rgba(0, 80, 1, 0.027);
-    border-bottom: .5px solid black;
-    backdrop-filter: blur(1000px);
-
-
+.pricing_budget {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 50px;
+  z-index: 1000;
+  background-color: rgba(0, 80, 1, 0.027);
+  border-bottom: 0.5px solid black;
+  backdrop-filter: blur(1000px);
 }
 
-.shopLink{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.shopLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.pricingSelect{
-    padding-right: 100px;
-    padding-left: 10px;
-
+.pricingSelect {
+  padding-right: 100px;
+  padding-left: 10px;
 }
 
-.budgetTitle{
-    padding-left: 100px;
-    padding-right: 10px;
-    color: rgb(54, 54, 241);
-    font-size: 35px;
+.budgetTitle {
+  padding-left: 100px;
+  padding-right: 10px;
+  color: rgb(54, 54, 241);
+  font-size: 35px;
 }
 
-.pricingTitle{
-    color: rgb(54, 54, 241);
-    font-size: 35px;
-    border-radius: 15px;
-    font-size: 35px;
+.pricingTitle {
+  color: rgb(54, 54, 241);
+  font-size: 35px;
+  border-radius: 15px;
+  font-size: 35px;
 }
 
 /* Home.css */
 
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.box div {
+  border: 1px solid black;
+  width: 500px;
+}

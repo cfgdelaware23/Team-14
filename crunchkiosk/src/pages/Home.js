@@ -26,7 +26,7 @@ const Home = () => {
         <div className="budgetTitle">Budget:</div>
         <input
           className="budgetVal"
-          placeholder="Budget: "
+          placeholder="$ Budget"
           type="text"
           onChange={(e) => {
             setBudget(e.currentTarget.value);
@@ -37,46 +37,47 @@ const Home = () => {
       <br></br>
       <br></br>
       <br></br>
-      <div className="shopLink">
-          <Link to="/shop">Shop page</Link>
-      
+      <div className="shopLink box">
+        <div>
+          {/* sugar freee vegan gluten free */}
+          {/* change value to be what db name col is */}
 
-      <div>
-        {/* sugar freee vegan gluten free */}
-        {/* change value to be what db name col is */}
+          <header> Dietary Restrictions</header>
+          <div className="">
+            <br></br>
+            <label for="vegan">Vegan</label>
+            <input
+              type="checkbox"
+              checked={vegan === "vegan"}
+              onChange={() => setVegan("vegan")}
+            />
+            <br></br>
 
-        <header> Dietary Restrictions</header>
-        <div className="">
-          <label for="vegan">Vegan</label>
-          <input
-            type="radio"
-            checked={vegan === "vegan"}
-            onChange={() => setVegan("Vegan")}
-          />
-          <br></br>
+            <label for="dairy">Dairy Free</label>
+            <input
+              type="checkbox"
+              checked={dairyFree === "dairyFree"}
+              onChange={() => setDairyFree("dairyFree")}
+            />
+            <br></br>
 
-          <label for="dairy">Dairy Free</label>
-          <input
-            type="radio"
-            checked={dairyFree === "dairyFree"}
-            onChange={() => setDairyFree("dairyFree")}
-          />
-          <br></br>
-
-          <label for="glutenFree">Gluten Free</label>
-          <input
-            type="radio"
-            checked={glutenFree === "glutenFree"}
-            onChange={() => setGlutenFree("glutenFree")}
-          />
-          <br></br>
-          <label for="sugarFree">Sugar Free</label>
-          <input
-            type="radio"
-            checked={sugarFree === "sugarFree"}
-            onChange={() => setSugarFree("sugarFree")}
-          />
+            <label for="glutenFree">Gluten Free</label>
+            <input
+              type="checkbox"
+              checked={glutenFree === "glutenFree"}
+              onChange={() => setGlutenFree("glutenFree")}
+            />
+            <br></br>
+            <label for="sugarFree">Sugar Free</label>
+            <input
+              type="checkbox"
+              checked={sugarFree === "sugarFree"}
+              onChange={() => setSugarFree("sugarFree")}
+            />
+          </div>
         </div>
+        <div className="bottom">
+          <Link to="/shop">Shop page</Link>
         </div>
       </div>
     </>
