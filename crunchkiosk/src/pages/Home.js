@@ -16,13 +16,12 @@ const Home = () => {
   const [sugarFree, setSugarFree] = useState(false);
   const [dairyFree, setDairyFree] = useState(false);
   const [budget, setBudget] = useState("");
-  // const [member, setMember] = useState("tier1");
   const [member, setMember] = useState(false);
 
   const navigate = useNavigate();
 
   const handleMember = (val) => {
-
+    console.log(val);
     if(val === "Member"){
       setMember(true);
     } else {
@@ -55,7 +54,7 @@ const Home = () => {
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
           <div className="pricingSelect">
-            <select onChange={(e) => setMember(e.value)}>
+            <select onSelect={(e) => handleMember(e.value)}>
               <option value="tier1">Member</option>
               <option value="tier2">Non-Member</option>
             </select>

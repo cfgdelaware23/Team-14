@@ -37,13 +37,13 @@ function Shop( {route}) {
 //   const userData = useContext(Context);
 
   const goToSelection = () => {
-    fetch('https://example.com/api/v1/posts', {
-        method: 'POST',
-        body: JSON.stringify({
-            title: 'My new post',
-            body: 'This is my new post.'
-        })
-        });
+    // fetch('https://example.com/api/v1/posts', {
+    //     method: 'POST',
+    //     body: JSON.stringify({
+    //         title: 'My new post',
+    //         body: 'This is my new post.'
+    //     })
+    //     });
     navigate("/selection");
   };
 
