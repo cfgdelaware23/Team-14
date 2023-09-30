@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import sample from "../sample1.json"; 
+import "../css/Selection.css";
 
 function Selection() {
     //const [category, setCategory] = useState("");

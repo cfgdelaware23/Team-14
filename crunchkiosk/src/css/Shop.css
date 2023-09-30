@@ -1,4 +1,9 @@
-body {background-color: white;}
+body {
+    background: url("../assets/bg.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
 
 .shopList{
     font-size: 40px;
