@@ -1,4 +1,4 @@
-.pricing_budget {
+/* .pricing_budget {
   position: fixed;
   left: 0;
   top: 0;
@@ -39,7 +39,6 @@
   font-size: 35px;
 }
 
-/* Home.css */
 
 .bottom {
   position: absolute;
@@ -68,4 +67,111 @@
   width: 500px;
   height: 300px;
 }
+ */
+/* Home.css */
 
+/* Background styling */
+
+
+/* Pricing section styling */
+.pricing_budget {
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: #FAFAFA;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricingTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+
+}
+
+.pricingSelect select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #333;
+
+}
+
+.budgetTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+
+}
+
+.budgetVal {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #333;
+  margin-top: 8px;
+
+}
+
+/* Dietary Restrictions section styling */
+.shopLink {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.shopLink header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Checkbox styling */
+.shopLink input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Bottom section styling */
+.bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.linked {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1E4182;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: background-color 0.2s;
+}
+
+.linked:hover {
+  background-color: #1E4182;
+}
+
+.shopLink input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.5); /* Increase checkbox size */
+}
+
+.shopLink label {
+  font-size: 18px; /* Increase label font size */
+  color: #555; /* Adjust label color */
+  margin-right: 10px;
+}
+
+.box{
+  background-color: #FAFAFA;
+}
