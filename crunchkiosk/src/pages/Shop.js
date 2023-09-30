@@ -2,7 +2,7 @@ import "../css/Shop.css";
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "../components/Footer";
 import Context from "./Context";
 
 // {
@@ -29,70 +29,57 @@ function Shop() {
 
   const userData = useContext(Context);
 
-  const goToFruits = () => {
-    navigate("/fruits");
+  const goToSelection = () => {
+    navigate("/selection");
   };
 
-  const goToVeggies = () => {
-    navigate("/veggies");
-  }
-
-  const goToCarbs = () => {
-    navigate("/carbs");
-  }
-
-  const goToProteins = () => {
-    navigate("/proteins");
-  }
-
-  const goToDairy = () => {
-    navigate("/dairy");
-  }
 
 
 
   return (
-    
+    <>
     <div className="shop-container">
       <div className="shopList">
         <p>Shop</p>
       </div>
 
-      <div className="shopItem" onClick={goToFruits}>
+      <div className="shopItem" onClick={goToSelection}>
         <Link to="/fruits">Fruits</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious fruits!</p>
       </div>
 
-      <div className="shopItem" onClick={goToVeggies}>
+      <div className="shopItem" onClick={goToSelection}>
         <Link to="/veggies">Veggies</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious vegetables!</p>
       </div>
 
-      <div className="shopItem" onClick={goToCarbs}>
+      <div className="shopItem" onClick={goToSelection}>
         <Link to="/carbs">Carbs</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious carbohydrates, all based off of your dietary restrictions</p>
       </div>
 
-      <div className="shopItem" onClick={goToProteins}>
+      <div className="shopItem" onClick={goToSelection}>
         <Link to="/proteins">Proteins</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious proteins, all based off of your dietary restrictions</p>
       </div>
 
-      <div className="shopItem" onClick={goToDairy}>
+      <div className="shopItem" onClick={goToSelection}>
         <Link to="/dairy">Dairy/Al</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious dairy products, all based off of your dietary restrictions</p>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
