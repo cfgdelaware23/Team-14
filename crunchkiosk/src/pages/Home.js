@@ -14,11 +14,7 @@ const Home = () => {
   const [sugarFree, setSugarFree] = useState(false);
   const [dairyFree, setDairyFree] = useState(false);
   const [budget, setBudget] = useState(0);
-<<<<<<< HEAD
   const [member, setMember] = useState(false);
-=======
-  const [member, setMember] = useState("false");
->>>>>>> 7e191254051179910841e5fd62a691e51a56b087
   const ANIMALS = ["true", "false"];
 
   const navigate = useNavigate();
@@ -58,13 +54,8 @@ const Home = () => {
     >
       <>
         <br />
-<<<<<<< HEAD
         <div className="pricingTitle">Welcome to Crunch Kiosk!</div>
-        <p>Please fill out the following form to see available groceries:</p>
-=======
-        <div className = 'crunchKiosk'>Welcome to Crunch Kiosk!</div>
         <div className = 'instructions'>Please fill out the following form to see available groceries:</div>
->>>>>>> 7e191254051179910841e5fd62a691e51a56b087
         <div className="pricing_budget">
           <div className="smallerTitle">Membership Status:</div>
           <div className="pricingSelect">
