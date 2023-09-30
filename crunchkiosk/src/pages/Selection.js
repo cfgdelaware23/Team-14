@@ -15,39 +15,48 @@ function Selection() {
     const location = useLocation();
 
     const [items, setItems] = useState([]);
-    const [category, setCategory] = useState(location.state[7]);
+    // const [category, setCategory] = useState(location.state[7]);
     const [cart, setCart] = useState([]);
 
     
 
-    const [userData,setUserData] = useState(location.state);
+    // const [userData,setUserData] = useState(location.state);
 
-    console.log(userData);
+    const [category, setCategory] = useState("FRUIT");
+    const [userData,setUserData] = useState([sample]);
 
-    const fetchData = async () => {
-    const dataToSend = {
-        membership: userData[0],
-        category: userData[7],
-        budget: userData[1],
-        glutenFree: userData[2],
-        dairyFree: userData[3],
-        vegan: userData[4],
-        vegetarian: userData[5],
-        sugarFree: userData[6],
-    };
+    useEffect(() => {
+    console.log(category);
+    setCategory("FRUIT");
+    setUserData(sample);
+    }, []);
 
-        try{
-            const response = await axios.post('http://localhost:8080/selection',dataToSend);
-            setItems(response.data);
-            // console.log(response.data);
-        }catch(error){
-            console.log(error);
-            console.error("error sending data", error);
-        }
+    // console.log(userData);
+
+    // const fetchData = async () => {
+    // const dataToSend = {
+    //     membership: userData[0],
+    //     category: userData[7],
+    //     budget: userData[1],
+    //     glutenFree: userData[2],
+    //     dairyFree: userData[3],
+    //     vegan: userData[4],
+    //     vegetarian: userData[5],
+    //     sugarFree: userData[6],
+    // };
+
+    //     try{
+    //         const response = await axios.post('http://localhost:8080/selection',dataToSend);
+    //         setItems(response.data);
+    //         // console.log(response.data);
+    //     }catch(error){
+    //         console.log(error);
+    //         console.error("error sending data", error);
+    //     }
         
-    };
+    // };
 
-    fetchData();
+    // fetchData();
 
     const addToCart = () => {
         console.log("add to cart");
@@ -58,33 +67,7 @@ function Selection() {
     };
 
 
-    // variable that keeps track of the user's window size width and height
-    const [width, setWidth]   = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
-    // listener that constantly updates the window size variables when user changes it
-    const updateDimensions = () => {
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
-    }
-
-    // useEffect function runs once directly when page loads
-    useEffect(() => {
-        //  Initializing AnimateOnScroll, tweak this function to change animation duration and delay
-        Aos.init({
-            once: 'true',
-            duration: 1000,
-            delay: 200
-        });
-
-        //  Scroll to top of page when page loads
-        window.scrollTo(0, 0);
-
-        //  Adding event listener to window to update window size variables
-        window.addEventListener("resize", updateDimensions);
-
-        //  Removing event listener when component unmounts
-        return () => window.removeEventListener("resize", updateDimensions);
-    }, []);
+    
 
     return (
         <>
@@ -93,7 +76,7 @@ function Selection() {
             {/*{console.log("!!!!")}*/}
             <div className='main'>
                 {/* {console.log(items[0])} */}
-                {items.map((item) => (
+                {userData.map((item) => (
                     <div className="item-grid">
                         {/*<div className="item-name">{item.charAt(0).toUpperCase() + item.slice(1)}</div>*/}
                         {/*<div className="item-price">${parseFloat(price).toFixed(2)}</div>*/}
