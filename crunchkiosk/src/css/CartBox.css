@@ -23,22 +23,26 @@
 .item-name {
     font-size: 16px;
     font-weight: bold;
+    font-family: Inter
 }
 
 .item-price {
     font-size: 14px;
     color: #555;
+    font-family: Inter
 }
 
 .item-quantity {
     font-size: 14px;
     color: #555;
+    font-family: Inter
 }
 
 .total {
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
+    font-family: Inter
 }
 
 .checkout-button {
@@ -50,6 +54,7 @@
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
+    font-family: Inter
 }
 
 .checkout-button:hover {
