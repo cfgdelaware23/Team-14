@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Inter);
 .footer-container{
     position: fixed;
     bottom: 0;
@@ -12,6 +13,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 100;
+    font-family: Inter;
 }
 
 .foot-branding img{
