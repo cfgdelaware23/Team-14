@@ -1,50 +1,10 @@
 
 body {
-    background: url("../assets/bg.png");
+  background: url("../assets/bg.png");
   background-size: cover;
   height: 100%;
   width: 100%;
 }
-/* 
-.shopList {
-  font-size: 40px;
-  text-align: center;
-  padding-bottom: 5%;
-}
-
-.shopItem {
-  background-color: #de5c52;
-  color: black;
-  font-size: 25px;
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  border: black;
-  text-decoration: none;
-  border-style: solid;
-  padding-bottom: 10px;
-}
-.shopItem:link,
-.linked:visited {
-  background-color: #de5c52;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-.shopItem:hover {
-  background-color: lightgray;
-  color: white;
-}
-
-.shopItem:target {
-  background-color: rgb(15, 14, 14);
-  color: white;
-} */
-/* Shop.css */
-
-/* Container for the entire shop page */
 .shop-container {
   display: flex;
   flex-direction: column;
