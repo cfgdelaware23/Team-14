@@ -3,7 +3,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-import Context from "./Context";
 import {useLocation} from 'react-router-dom';
 
 // {
@@ -90,7 +89,7 @@ function Shop() {
       </div>
 
       <div className="shopItem" onClick={() => goToSelection("DAIRY")}>
-        <Link to="/selection">Dairy/Al</Link>
+        <Link to="/selection">Dairy</Link>
         <br></br>
         <br></br>
         <p className="subtitle">Choose from a selection of healthy and nutritious dairy products, all based off of your dietary restrictions</p>

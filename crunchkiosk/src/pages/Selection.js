@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
-import sample from "../sample1.json"; 
 import "../css/Selection.css";
-import Item from '../components/Item';
 import Footer from '../components/Footer';
-import { useEffect } from 'react';
-import Aos from 'aos';
 import axios from 'axios';
-import item from "../components/Item";
 import { useLocation } from 'react-router-dom';
 
 
