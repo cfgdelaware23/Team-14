@@ -1,9 +1,44 @@
+import React, { useState } from 'react';
+import sample from "../sample1.json"; 
+
 function Selection() {
-    return ( 
-        <>
-            <p>Selection</p>
-        </>
-    )
+    //const [category, setCategory] = useState("");
+    const [items, setItems] = useState([]);
+
+    const category = "fruit";
+
+    //setCategory("fruit");
+
+
+    const fetchData = async () => {
+        try {
+            // const response = await fetch({sample});
+            // const data = await response.json();
+            // setItems(JSON.parse({sample}));
+            
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    fetchData();
+    console.log(items);
+
+    let list = document.getElementById('items');
+    for(let i = 0; i < items.length; i++){
+        let li = document.createElement('li');
+        li.innerText = [items][i];
+        list.appendChild(li);
+    }
+
+    return (
+        <div>
+            <h1>{category}</h1>
+            <div>
+                {sample.map(({item, price}) => (<li>{item} {price}</li>))}
+            </div>
+        </div>
+    );
 }
 
 export default Selection;
