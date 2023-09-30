@@ -32,8 +32,6 @@ const Home = () => {
   // };
 
   const goToShop = (test) => {
-    
-    navigate("/shop", { state: info });
     const info = [member, budget, glutenFree, dairyFree, vegan, vegetarian, sugarFree];
     navigate("/shop", {state: info});
   };
