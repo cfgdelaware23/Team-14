@@ -1,16 +1,29 @@
 package main;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.io.JsonStringEncoder;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+import static org.springframework.data.repository.init.ResourceReader.Type.JSON;
+
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RestController("http://localhost:8080")
 public class RESTController {
     @Autowired
     ItemRepository itemRepository;
@@ -37,28 +50,29 @@ public class RESTController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-    @RequestMapping(value="/selection", method=RequestMethod.GET)
-    public ResponseEntity getItems(RequestItems requestItems) {
+    @RequestMapping(value="/selection", method=RequestMethod.POST)
+    public ResponseEntity getItems(RequestItems requestItems) throws JsonProcessingException {
         List<ItemEntity> entities = itemRepository.findAll();
         List<ItemResult> results = new ArrayList<>();
-        List<ItemEntity> current = new ArrayList<>();
+        List<ItemEntity> current = entities;
         boolean isMember = requestItems.membership;
         if(requestItems.dairyFree) {
-            current = (List<ItemEntity>) entities.stream().filter(itemEntity -> itemEntity.isDairyFree());
+            current = entities.stream().filter(itemEntity -> itemEntity.isDairyFree()).toList();
         }
         if(requestItems.glutenFree) {
-            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isGlutenFree());
+            current = current.stream().filter(itemEntity -> itemEntity.isGlutenFree()).toList();
         }
         if(requestItems.vegan) {
-            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isVegan());
+            current = current.stream().filter(itemEntity -> itemEntity.isVegan()).toList();
         }
         if(requestItems.vegetarian) {
-            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isVegetarian());
+            current = current.stream().filter(itemEntity -> itemEntity.isVegetarian()).toList();
         }
         if(requestItems.sugarFree) {
-            current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.isSugarFree());
+            current = current.stream().filter(itemEntity -> itemEntity.isSugarFree()).toList();
         }
-        current = (List<ItemEntity>) current.stream().filter(itemEntity -> itemEntity.getCategory() == requestItems.category);
+
+       // current = current.stream().filter(itemEntity -> itemEntity.getCategory() == requestItems.category).toList();
 
         for(ItemEntity itemEntity: current) {
             ItemResult itemResult = new ItemResult();
@@ -71,7 +85,11 @@ public class RESTController {
             }
             results.add(itemResult);
         }
-        return new ResponseEntity(results, HttpStatus.OK);
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        String jsonArray = objectMapper.writeValueAsString(results);
+
+        return new ResponseEntity(jsonArray, HttpStatus.OK);
     }
 
     @RequestMapping(value="/newItem", method=RequestMethod.POST)

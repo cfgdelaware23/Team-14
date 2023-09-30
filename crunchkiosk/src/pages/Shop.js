@@ -30,11 +30,24 @@ function Shop() {
   const userData = useContext(Context);
 
   const goToSelection = () => {
+    fetch("http:localhost:8080/selection", {
+      method: "POST",
+      body: JSON.stringify({
+        membership: true,
+        category: "FRUIT",
+        budget: 50,
+        glutenFree: true,
+        dairyFree: true,
+        vegan: false,
+        vegetarian: false,
+        sugarFree: false
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    }).then(r => console.log(r));
     navigate("/selection");
   };
-
-
-
 
   return (
     <>
