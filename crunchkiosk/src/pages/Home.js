@@ -9,6 +9,7 @@ import Context from "./Context";
 
 const Home = () => {
   const [vegan, setVegan] = useState("");
+  const [vegetarian, setVegetarian] = useState("");
   const [glutenFree, setGlutenFree] = useState("");
   const [sugarFree, setSugarFree] = useState("");
   const [dairyFree, setDairyFree] = useState("");
@@ -28,7 +29,7 @@ const Home = () => {
 
   return (
     <Context.Provider
-      value={[vegan, glutenFree, sugarFree, dairyFree, budget, member]}
+      value={[vegan, vegetarian, glutenFree, sugarFree, dairyFree, budget, member]}
     >
       <>
         <div className="pricing_budget">
@@ -67,22 +68,40 @@ const Home = () => {
               <input
                 type="checkbox"
                 checked={vegan === "vegan"}
-                onChange={() => setVegan("vegan")}
+                onChange={() => {
+                  if(vegan === "vegan") setVegan("");
+                  else setVegan("vegan");
+                }}
               />
               <br></br>
-
+              <label for="vegetarian">Vegetarian</label>
+              <input
+                type="checkbox"
+                checked={vegetarian === "vegetarian"}
+                onChange={() => {
+                  if(vegetarian === "vegetarian") setVegetarian("");
+                  else setVegetarian("vegetarian");
+                }}
+              />
+              <br></br>
               <label for="dairy">Dairy Free</label>
               <input
                 type="checkbox"
                 checked={dairyFree === "dairyFree"}
-                onChange={() => setDairyFree("dairyFree")}
+                onChange={() => {
+                  if(dairyFree === "dairyFree") setDairyFree("");
+                  else setDairyFree("dairyFree");
+                }}
               />
               <br></br>
               <label for="glutenFree">Gluten Free</label>
               <input
                 type="checkbox"
                 checked={glutenFree === "glutenFree"}
-                onChange={() => setGlutenFree("glutenFree")}
+                onChange={() => {
+                  if(glutenFree === "glutenFree") setGlutenFree("");
+                  else setGlutenFree("glutenFree");
+                }}
               />
 
               <br></br>
@@ -90,7 +109,10 @@ const Home = () => {
               <input
                 type="checkbox"
                 checked={sugarFree === "sugarFree"}
-                onChange={() => setSugarFree("sugarFree")}
+                onChange={() => {
+                  if(sugarFree === "sugarFree") setSugarFree("");
+                  else setSugarFree("sugarFree");
+                }}
               />
             </div>
           </div>
