@@ -16,23 +16,24 @@ const Home = () => {
   const [sugarFree, setSugarFree] = useState(false);
   const [dairyFree, setDairyFree] = useState(false);
   const [budget, setBudget] = useState("");
-
-  //TODO: MEMBER DOESNT WORK
-  const [member, setMember] = useState(false);
+  const [member, setMember] = useState("false");
+  const ANIMALS = ["true", "false"];
 
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleMember = (val) => {
-    console.log(val);
-    if(val === "Member"){
-      setMember(true);
-    } else {
-      setMember(false);
-    }
-  }
+  // const handleMember = (val) => {
+  //   console.log(val);
+  //   if (val === "Member") {
+  //     setMember(true);
+  //   } else {
+  //     setMember(false);
+  //   }
+  // };
 
   const goToShop = (test) => {
+    
+    navigate("/shop", { state: info });
     const info = [member, budget, glutenFree, dairyFree, vegan, vegetarian, sugarFree];
     navigate("/shop", {state: info});
   };
@@ -56,10 +57,32 @@ const Home = () => {
         <div className="pricing_budget">
           <div className="pricingTitle">Pricing Tier:</div>
           <div className="pricingSelect">
-            <select onSelect={(e) => handleMember(e.value)}>
+            {/* <select onSelect={(e) => handleMember(e.value)}>
               <option value="tier1">Member</option>
               <option value="tier2">Non-Member</option>
-            </select>
+            </select> */}
+            <label htmlFor="animal">
+              Member
+              <select
+                id="animal"
+                value={member}
+                onChange={(e) => {
+                  setMember(e.target.value);
+                  // setBreed("");
+                }}
+                onBlur={(e) => {
+                  setMember(e.target.value);
+                  // setBreed("");
+                }}
+              >
+                <option />
+                {ANIMALS.map((animal) => (
+                  <option key={animal} value={animal}>
+                    {animal}
+                  </option>
+                ))}
+              </select>
+            </label>
           </div>
           <div className="budgetTitle">Budget:</div>
           <input
