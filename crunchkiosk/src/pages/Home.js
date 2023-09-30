@@ -15,7 +15,7 @@ const Home = () => {
   const [dairyFree, setDairyFree] = useState(false);
   const [budget, setBudget] = useState(0);
   const [member, setMember] = useState(false);
-  const ANIMALS = ["true", "false"];
+  const ANIMALS = ["Yes", "No"];
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -31,7 +31,7 @@ const Home = () => {
 
   const goToShop = (test) => {
     let tempMemb = false;
-    if(member === "true"){
+    if(member === "Yes"){
       tempMemb = true;
     }else{
       tempMemb = false;

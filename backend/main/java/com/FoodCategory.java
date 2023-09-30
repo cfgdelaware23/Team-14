@@ -1,4 +1,4 @@
-package main.java;
+package main.java.com;
 
 import lombok.Getter;
 import lombok.Setter;

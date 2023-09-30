@@ -1,4 +1,4 @@
-package main.java;
+package main.java.com;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

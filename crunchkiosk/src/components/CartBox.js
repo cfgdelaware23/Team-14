@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function CartBox() {
   const initialCart = [
-    ['apple', 1.00, 2],
+    ['corn tortilla', 1.00, 2],
     ['sourdough', 2.35, 1],
     ['plant-based yoghurt', 1.20, 2],
     ['mango', 1.10, 4],

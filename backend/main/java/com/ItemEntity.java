@@ -1,4 +1,4 @@
-package main.java;
+package main.java.com;
 
 import jakarta.persistence.*;
 import lombok.Getter;
