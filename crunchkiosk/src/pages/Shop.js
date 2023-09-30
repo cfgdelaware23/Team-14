@@ -1,4 +1,5 @@
 import "../css/Shop.css";
+
 function Shop() {
     return ( 
         <>
@@ -7,19 +8,19 @@ function Shop() {
         </div>
 
         <div className = "shopItem">
-            <p>Fruits</p>
+            <Link>Fruits</Link>
         </div>
         <div className = "shopItem">
-            <p>Veggies</p>
+            <Link>Veggies</Link>
         </div>
         <div className = "shopItem">
-            <p>Carbs</p>
+            <Link>Carbs</Link>
         </div>
         <div className = "shopItem">
-            <p>Proteins</p>
+            <Link>Proteins</Link>
         </div>
         <div className = "shopItem">
-            <p>Dairy/Al</p>
+            <Link>Dairy/Al</Link>
         </div>
         </>
     )
