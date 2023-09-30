@@ -8,6 +8,7 @@ body {
 .shopList{
     font-size: 40px;
     text-align: center;
+    padding-bottom: 5%;
 }
 
 .shopItem{
@@ -19,6 +20,7 @@ body {
     text-align: center;
     border: black;
     border-style: solid;
+    padding-bottom: 10px;
 
 }
 
@@ -27,5 +29,9 @@ body {
     color: white;
 }
 
+.shopItem:target{
+    background-color: rgb(15, 14, 14);
+    color: white;
+}
 
 
