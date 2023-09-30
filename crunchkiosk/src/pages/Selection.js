@@ -11,7 +11,7 @@ function Selection() {
     //const [category, setCategory] = useState("");
     const [items, setItems] = useState([]);
 
-    const category = "fruit";
+    const category = "Fruit";
 
     //setCategory("fruit");
 
